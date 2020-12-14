@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+}
+.wrapper-map-class {
+    width: 1200px;
+    height: 675px;
+    margin: 0 auto;
+}
+#map-id {
+    width: 100%;
+    height:100%;
+}
