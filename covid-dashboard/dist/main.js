@@ -26,17 +26,7 @@ eval("\n\n//# sourceURL=webpack:///./js/babel.js?");
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _servise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./servise */ \"./js/servise.js\");\n/* harmony import */ var _servise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_servise__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./babel */ \"./js/babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/css/style.css */ \"./styles/css/style.css\");\n/* harmony import */ var _styles_sass_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/sass/style.scss */ \"./styles/sass/style.scss\");\n\n\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
-
-/***/ }),
-
-/***/ "./js/servise.js":
-/*!***********************!*
-  !*** ./js/servise.js ***!
-  \***********************/
-/***/ (function() {
-
-eval("\n\n//# sourceURL=webpack:///./js/servise.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./babel */ \"./js/babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/css/style.css */ \"./styles/css/style.css\");\n/* harmony import */ var _styles_sass_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/sass/style.scss */ \"./styles/sass/style.scss\");\n\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
 
 /***/ }),
 
