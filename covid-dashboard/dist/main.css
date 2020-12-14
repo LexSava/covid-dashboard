@@ -1,9 +1,4 @@
 
-@font-face {
-  font-family: "Prompt", sans-serif;
-  src: url(1dc2c4375cc1302ea141c6871c4d3179.ttf);
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -93,6 +88,14 @@ h6 {
   font-weight: inherit;
 }
 
+@font-face {
+  font-family: "Alfa Slab One";
+  src: url(f53d46bc54f7a54ecfe489f153bbb71a.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Mitr";
+  src: url(f801a291ed84d94a1389568ee787ecd2.ttf) format("truetype");
+}
 .header {
   width: 100%;
   background-color: #f5df4d;
@@ -101,7 +104,6 @@ h6 {
   padding-top: 10px;
 }
 .header h1 {
-  font-family: "Prompt", sans-serif;
   font-weight: 900;
   font-size: 1.9em;
 }
@@ -117,7 +119,6 @@ h6 {
 .content__widget {
   border: 1px solid black;
   background-color: #939597;
-  font-size: 1.5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,3 +154,31 @@ h6 {
   background-color: #f5df4d;
   height: 10%;
 }
+
+.general__information {
+  display: block;
+  background-color: #808080;
+}
+.general__information h2 {
+  font-family: "Alfa Slab One", cursive;
+  margin: 10px 5px;
+  color: #5f0808;
+  font-size: 20px;
+}
+.general__information .general__information__heading {
+  font-family: "Mitr", sans-serif;
+  color: black;
+  font-weight: 500;
+  margin: 5px 0 0 10px;
+  font-size: 16px;
+}
+@font-face {
+  font-family: "Alfa Slab One";
+  src: url(f53d46bc54f7a54ecfe489f153bbb71a.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Mitr";
+  src: url(f801a291ed84d94a1389568ee787ecd2.ttf) format("truetype");
+}
+

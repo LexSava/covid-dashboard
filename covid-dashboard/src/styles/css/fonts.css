@@ -1,4 +1,9 @@
 @font-face {
-  font-family: "Prompt", sans-serif;
-  src: url(../../assets/fonts/Prompt-Black.ttf);
+  font-family: "Alfa Slab One";
+  src: url("../../assets/fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Mitr";
+  src: url("../../assets/fonts/Mitr/Mitr-Medium.ttf") format("truetype");
 }
