@@ -1,4 +1,9 @@
 
+@font-face {
+  font-family: "Prompt", sans-serif;
+  src: url(1dc2c4375cc1302ea141c6871c4d3179.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -92,9 +97,13 @@ h6 {
   width: 100%;
   background-color: #f5df4d;
   height: 10%;
-  font-size: 1.5em;
   text-align: center;
   padding-top: 10px;
+}
+.header h1 {
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  font-size: 1.9em;
 }
 
 .content {
