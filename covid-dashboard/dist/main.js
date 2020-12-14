@@ -26,17 +26,28 @@ eval("\n\n//# sourceURL=webpack:///./js/babel.js?");
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _servise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./servise */ \"./js/servise.js\");\n/* harmony import */ var _servise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_servise__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./babel */ \"./js/babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/css/style.css */ \"./styles/css/style.css\");\n/* harmony import */ var _styles_sass_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/sass/style.scss */ \"./styles/sass/style.scss\");\n\n\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./babel */ \"./js/babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./widget.zero */ \"./js/widget.zero.js\");\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_widget_zero__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/css/style.css */ \"./styles/css/style.css\");\n/* harmony import */ var _styles_sass_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/sass/style.scss */ \"./styles/sass/style.scss\");\n/* harmony import */ var _styles_css_fonts_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/css/fonts.css */ \"./styles/css/fonts.css\");\n\n\n\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
 
 /***/ }),
 
-/***/ "./js/servise.js":
-/*!***********************!*
-  !*** ./js/servise.js ***!
-  \***********************/
+/***/ "./js/widget.zero.js":
+/*!***************************!*
+  !*** ./js/widget.zero.js ***!
+  \***************************/
 /***/ (function() {
 
-eval("\n\n//# sourceURL=webpack:///./js/servise.js?");
+eval("function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nvar widget_zero = document.querySelector('.widget_0');\nwidget_zero.classList.add('general__information');\n\nfunction getResponseAllCases() {\n  return _getResponseAllCases.apply(this, arguments);\n}\n\nfunction _getResponseAllCases() {\n  _getResponseAllCases = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    var response, content, key;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=366');\n\n          case 2:\n            response = _context.sent;\n            _context.next = 5;\n            return response.json();\n\n          case 5:\n            content = _context.sent;\n\n            for (key in content) {\n              widget_zero.appendChild(getEl(\"- \".concat(key, \" - \").concat(content[key][Object.keys(content[key])[Object.keys(content[key]).length - 1]])));\n            }\n\n          case 7:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _getResponseAllCases.apply(this, arguments);\n}\n\ngetResponseAllCases();\n\nfunction getEl(content) {\n  var newEl = document.createElement('div');\n  newEl.classList.add('general__information__heading');\n  newEl.innerHTML = content;\n  return newEl;\n}\n\n//# sourceURL=webpack:///./js/widget.zero.js?");
+
+/***/ }),
+
+/***/ "./styles/css/fonts.css":
+/*!******************************!*
+  !*** ./styles/css/fonts.css ***!
+  \******************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./styles/css/fonts.css?");
 
 /***/ }),
 
