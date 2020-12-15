@@ -17,25 +17,34 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(osmap);
 
-const countries = [];
-//const points = {};
 async function getCountries() {
-  const response = await fetch('https://api.covid19api.com/countries');  
-  const content = await response.json();  
+  const response = await fetch('https://disease.sh/v2/countries');
+  const content = await response.json();    
   for (const key in content) {
-    countries.push(content[key].Slug);
-    //widget_zero.appendChild(getEl(`- ${key} - ${content[key][Object.keys(content[key])[Object.keys(content[key]).length - 1]]}`));
+    let x, y;
+    if (content[key].cases > 10000000) {
+      x = 50; 
+      y = 50;
+    } else if (content[key].cases > 1000000 && content[key].cases < 9999999) {
+      x = 40; 
+      y = 40;
+    } else if (content[key].cases > 100000 && content[key].cases < 999999) {
+      x = 30; 
+      y = 30;
+    } else if (content[key].cases > 10000 && content[key].cases < 99999) {
+      x = 20; 
+      y = 20;
+    } else {
+      x = 10; 
+      y = 10;
+    }
+    let myIcon = L.icon({
+      iconUrl: './assets/icon/icons8-filled-circle-60.png',
+      iconSize: [x, y]
+    });
+    L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], {icon: myIcon}).addTo(osmap)
+      .bindPopup(`Country: ${content[key].country} <br> Cases: ${content[key].cases} <br> Deaths: ${content[key].deaths}`);
   }
-  /* for (const slug of countries) {      
-    const markers = await fetch(`https://api.covid19api.com/live/country/${slug}/status/confirmed`);
-    const array_obj = await markers.json();
-    //console.log(array_obj[0].Country);
-  }  */ 
 }
   
 getCountries();
-
-/* L.marker([array_obj[0].Lat, array_obj[0].Lon]).addTo(osmap)
-      .bindPopup(array_obj[0].Country)
-      .openPopup(); */
-//console.log(countries);
