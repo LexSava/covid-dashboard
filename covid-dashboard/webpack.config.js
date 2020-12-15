@@ -60,7 +60,7 @@ module.exports = {
         contentBase: path.resolve(__dirname, './dist'),
         open: true,
         compress: true,
-        hot: isDev,
+        hot: true,
         port: 8080,
     },
     plugins: [
@@ -83,7 +83,7 @@ module.exports = {
             {
                 filename: filename('css'),
             }
-        )
+        ),
     ],
     module: {
         rules: [
