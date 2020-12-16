@@ -43,8 +43,9 @@ async function getCountries() {
       iconSize: [x, y]
     });
     L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], {icon: myIcon}).addTo(osmap)
-      .bindPopup(`Country: ${content[key].country} <br> Cases: ${content[key].cases} <br> Deaths: ${content[key].deaths}`);
-  }
+      .bindPopup(`Country: ${content[key].country} <br> Cases: ${content[key].cases} <br> Deaths: ${content[key].deaths}`)
+      .bindTooltip(content[key].country);
+  }  
 }
   
 getCountries();
