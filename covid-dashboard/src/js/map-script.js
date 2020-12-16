@@ -7,6 +7,10 @@ function create_element(type, options) {
   options[5].append(elem);
   return elem;
 }
+let check = {
+  cumulative: true,
+  active: false
+}
 
 document.querySelector('.widget_3').innerHTML = '';
 create_element('div', ['wrapper-map-class', 'wrapper-map-id',,, '', document.querySelector('.widget_3')]);
@@ -25,6 +29,11 @@ create_element('span', ['span-value-class', 'span-value-deaths-id',,, '', docume
 create_element('div', ['close-class', 'close-id',,, '<img class = "close-image-class" src="./assets/icon/icons8-cancel-50.png">', document.querySelector('.map-class')]);
 create_element('div', ['center-class', 'center-id',,, '<img class = "center-image-class" src="./assets/icon/icons8-center-of-gravity-50.png">', document.querySelector('.map-class')]);
 create_element('div', ['zoomin-class', 'zoomin-id',,, '<img class = "zoomin-image-class" src="./assets/icon/icons8-zoom-in-50.png">', document.querySelector('.map-class')]);
+
+create_element('div', ['button-class active-class', 'cumulative-cases-id',,, '', document.querySelector('.map-class')]);
+create_element('div', ['button-text-class', 'cumulative-cases-text-id',,, 'Cumulative Cases', document.getElementById('cumulative-cases-id')]);
+create_element('div', ['button-class passive-class', 'active-cases-id',,, '', document.querySelector('.map-class')]);
+create_element('div', ['button-text-class', 'active-cases-text-id',,, 'Active Cases', document.getElementById('active-cases-id')]);
 
 const osmap = L.map('map-id', {scrollWheelZoom: true, zoomControl: false}).setView([10, 0], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -86,6 +95,20 @@ document.getElementById('close-id').addEventListener('click', () => {
   document.querySelector('.close-class').style.display = 'none';
   document.querySelector('.center-class').style.display = 'none';
   document.querySelector('.zoomin-class').style.display = 'none';
+});
+
+document.getElementById('active-cases-id').addEventListener('click', () => {
+  check.cumulative = false;
+  check.active = true;
+  document.getElementById('cumulative-cases-id').className = 'button-class passive-class';
+  document.getElementById('active-cases-id').className = 'button-class active-class';
+});
+
+document.getElementById('cumulative-cases-id').addEventListener('click', () => {
+  check.cumulative = true;
+  check.active = false;
+  document.getElementById('cumulative-cases-id').className = 'button-class active-class';
+  document.getElementById('active-cases-id').className = 'button-class passive-class';  
 });
   
 getCountries();

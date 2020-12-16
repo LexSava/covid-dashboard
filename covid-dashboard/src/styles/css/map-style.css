@@ -22,7 +22,6 @@
     background: #333333;    
     border: solid 1px #404040;
     z-index: 5000;    
-    transition: all 0.5s;
     border-radius: 5px;
 }
 .info-class {    
@@ -89,4 +88,37 @@
 }
 .zoomin-image-class:hover {
     cursor: pointer;    
+}
+.button-class {
+    display: flex; 
+    justify-content: center;
+    align-items: center;   
+    position: absolute;
+    width: 150px;
+    height: 40px;          
+    z-index: 5000;    
+    border-radius: 5px;
+}
+.button-class:hover {
+    cursor: pointer;
+}
+.button-text-class {
+    color: #bdbdbd;
+    font-size: 1.2em;
+}
+.active-class {
+    background: #333333; 
+    border: solid 1px #dc143c; 
+}
+.passive-class {
+    background: black; 
+    border: solid 1px #404040; 
+}
+#cumulative-cases-id {
+    top: 550px;
+    left: 10px;
+}
+#active-cases-id {
+    top: 550px;
+    left: 170px;
 }
