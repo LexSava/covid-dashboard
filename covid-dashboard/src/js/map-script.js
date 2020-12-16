@@ -69,11 +69,13 @@ async function getCountries() {
       document.getElementById('span-value-country-id').innerHTML = content[key].country;
       document.getElementById('span-value-cases-id').innerHTML = content[key].cases.toLocaleString('ru');
       document.getElementById('span-value-deaths-id').innerHTML = content[key].deaths.toLocaleString('ru');
+      const lat = content[key].countryInfo.lat;
+      const lon = content[key].countryInfo.long;
       document.getElementById('center-id').addEventListener('click', () => {
-        osmap.setView([content[key].countryInfo.lat, content[key].countryInfo.long]);
+        osmap.setView([lat, lon]);
       });
       document.getElementById('zoomin-id').addEventListener('click', () => {
-        osmap.setView([content[key].countryInfo.lat, content[key].countryInfo.long], 6);
+        osmap.setView([lat, lon], 6);
       });
     });    
   }  
