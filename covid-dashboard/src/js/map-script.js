@@ -26,7 +26,7 @@ create_element('div', ['close-class', 'close-id',,, '<img class = "close-image-c
 create_element('div', ['center-class', 'center-id',,, '<img class = "center-image-class" src="./assets/icon/icons8-center-of-gravity-50.png">', document.querySelector('.map-class')]);
 create_element('div', ['zoomin-class', 'zoomin-id',,, '<img class = "zoomin-image-class" src="./assets/icon/icons8-zoom-in-50.png">', document.querySelector('.map-class')]);
 
-const osmap = L.map('map-id', {scrollWheelZoom: false, zoomControl: false}).setView([10, 0], 2);
+const osmap = L.map('map-id', {scrollWheelZoom: true, zoomControl: false}).setView([10, 0], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(osmap);
@@ -58,7 +58,8 @@ async function getCountries() {
       iconUrl: './assets/icon/icons8-filled-circle-60.png',
       iconSize: [x, y]
     });    
-    const tooltip = L.tooltip({direction: 'top'}).setContent(content[key].country);
+    const tooltip = L.tooltip({direction: 'top'}).setContent(`Country: ${content[key].country} <br> 
+      Cases: ${content[key].cases.toLocaleString('ru')} <br> Deaths: ${content[key].deaths.toLocaleString('ru')}`);
     const mark = L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], {icon: myIcon}).addTo(osmap)
       .bindTooltip(tooltip);
     mark.addEventListener('click', () => {
