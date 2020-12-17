@@ -3,6 +3,7 @@ import Chart from 'chart.js';
 
 const BTN_EXPAND_BLOCK = document.querySelector('.widget_4__btn');
 const BLOCK_WIDGET_4 = document.querySelector('.widget_4');
+const SELECT_COUNTRYS = document.querySelector('.dropdown_select');
 
 
 const D = new Date("01/20/20");
@@ -83,3 +84,21 @@ BuildGraphWithData()
 BTN_EXPAND_BLOCK.addEventListener('click', () => {
     BLOCK_WIDGET_4.classList.toggle('active');
 })
+
+function getNewOption(content) {
+    const NewOption = document.createElement('option');
+    NewOption.innerHTML = content;
+    NewOption.setAttribute("value", `${content}`)
+    return NewOption;
+}
+
+async function GetInformationThroughoutTheCountry() {
+    const response = await fetch('https://disease.sh/v2/countries');
+    const results = await response.json();
+
+    for (const key in results) {
+        SELECT_COUNTRYS.appendChild(getNewOption(`${results[key].country}`));
+    }
+}
+
+GetInformationThroughoutTheCountry()
