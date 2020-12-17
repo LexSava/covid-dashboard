@@ -20,7 +20,7 @@ while (D.getTime() < Till.getTime()) {
 //     console.log(Object.values(results.cases));
 // }
 
-async function getRegetResultsOnCovid() {
+async function BuildGraphWithData() {
     const response = await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=366');
     const results = await response.json();
     const arrCasesValue = Object.values(results.cases);
@@ -61,12 +61,21 @@ async function getRegetResultsOnCovid() {
         },
         // Настройки графиков
         options: {
-
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                        displayFormats: {
+                            quarter: 'MMM YYYY'
+                        }
+                    }
+                }]
+            }
         }
     })
 }
 
-getRegetResultsOnCovid()
+BuildGraphWithData()
 
 
 
