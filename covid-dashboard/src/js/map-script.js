@@ -36,8 +36,8 @@ create_element('div', ['button-class passive-class', 'active-cases-id',,, '', do
 create_element('div', ['button-text-class', 'active-cases-text-id',,, 'Active Cases', document.getElementById('active-cases-id')]);
 
 const osmap = L.map('map-id', {scrollWheelZoom: true, zoomControl: false}).setView([10, 0], 2);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 }).addTo(osmap);
 
 new L.Control.Zoom({ position: 'topright' }).addTo(osmap);
@@ -68,7 +68,7 @@ async function getCountries() {
       iconSize: [x, y]
     });    
     const tooltip = L.tooltip({direction: 'top'}).setContent(`Country: ${content[key].country} <br> 
-      Cases: ${content[key].cases.toLocaleString('ru')} <br> Deaths: ${content[key].deaths.toLocaleString('ru')}`);
+      Cases: ${content[key].cases.toLocaleString()} <br> Deaths: ${content[key].deaths.toLocaleString()}`);
     const mark = L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], {icon: myIcon}).addTo(osmap)
       .bindTooltip(tooltip);
     mark.addEventListener('click', () => {
@@ -77,8 +77,8 @@ async function getCountries() {
       document.querySelector('.center-class').style.display = 'flex';
       document.querySelector('.zoomin-class').style.display = 'flex';
       document.getElementById('span-value-country-id').innerHTML = content[key].country;
-      document.getElementById('span-value-cases-id').innerHTML = content[key].cases.toLocaleString('ru');
-      document.getElementById('span-value-deaths-id').innerHTML = content[key].deaths.toLocaleString('ru');
+      document.getElementById('span-value-cases-id').innerHTML = content[key].cases.toLocaleString();
+      document.getElementById('span-value-deaths-id').innerHTML = content[key].deaths.toLocaleString();
       const lat = content[key].countryInfo.lat;
       const lon = content[key].countryInfo.long;
       document.getElementById('center-id').addEventListener('click', () => {
