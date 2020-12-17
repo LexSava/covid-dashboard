@@ -1,11 +1,14 @@
 import moment from 'moment';
 import Chart from 'chart.js';
 
+const BTN_EXPAND_BLOCK = document.querySelector('.widget_4__btn');
+const BLOCK_WIDGET_4 = document.querySelector('.widget_4');
 
-let D = new Date("01/20/20");
+
+const D = new Date("01/20/20");
 let Till = new Date();
 const ARRAY_OF_DATES = [];
-let ctx = document.getElementById('myChart').getContext('2d');
+const ctx = document.getElementById('myChart').getContext('2d');
 
 
 function pad(s) { return ('00' + s).slice(-2) }
@@ -77,5 +80,6 @@ async function BuildGraphWithData() {
 
 BuildGraphWithData()
 
-
-
+BTN_EXPAND_BLOCK.addEventListener('click', () => {
+    BLOCK_WIDGET_4.classList.toggle('active');
+})
