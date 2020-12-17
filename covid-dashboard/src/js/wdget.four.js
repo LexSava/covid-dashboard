@@ -24,6 +24,7 @@ async function getRegetResultsOnCovid() {
     const response = await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=366');
     const results = await response.json();
     const arrCasesValue = Object.values(results.cases);
+    const arrDeathsValue = Object.values(results.deaths);
 
     let chart = new Chart(ctx, {
         // Тип графика
@@ -37,11 +38,22 @@ async function getRegetResultsOnCovid() {
                 label: 'Cases', // Название
                 // backgroundColor: 'rgb(255, 99, 132)', // Цвет закраски
                 borderColor: 'rgb(255, 99, 132)', // Цвет линии
+                pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderWidth: 1,
+                pointRadius: 1,
                 data: arrCasesValue // Данные каждой точки графика
+            }, {
+                label: 'Deaths', // Название
+                borderColor: 'rgb(37, 37, 37);', // Цвет линии
+                pointBackgroundColor: 'rgb(37, 37, 37);',
+                pointBorderWidth: 1,
+                pointRadius: 1,
+                data: arrDeathsValue // Данные каждой точки графика
             }]
         },
         // Настройки графиков
         options: {
+
         }
     })
 }
