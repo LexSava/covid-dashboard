@@ -13,65 +13,65 @@ let check = {
 }
 
 document.querySelector('.widget_3').innerHTML = '';
-create_element('div', ['wrapper-map-class', 'wrapper-map-id',,, '', document.querySelector('.widget_3')]);
-create_element('div', ['map-class', 'map-id',,, '', document.querySelector('.wrapper-map-class')]);
-create_element('div', ['feature-info-class', 'feature-info-id',,, '', document.querySelector('.map-class')]);
-create_element('div', ['info-class', 'info-id',,, '', document.querySelector('.feature-info-class')]);
-create_element('p', ['paragraph-class', 'paragraph1-id',,, '', document.querySelector('.info-class')]);
-create_element('span', ['span-name-class', 'span-name-country-id',,, 'Country: ', document.getElementById('paragraph1-id')]);
-create_element('span', ['span-value-class', 'span-value-country-id',,, '', document.getElementById('paragraph1-id')]);
-create_element('p', ['paragraph-class', 'paragraph2-id',,, '', document.querySelector('.info-class')]);
-create_element('span', ['span-name-class', 'span-name-cases-id',,, 'Cases: ', document.getElementById('paragraph2-id')]);
-create_element('span', ['span-value-class', 'span-value-cases-id',,, '', document.getElementById('paragraph2-id')]);
-create_element('p', ['paragraph-class', 'paragraph3-id',,, '', document.querySelector('.info-class')]);
-create_element('span', ['span-name-class', 'span-name-deaths-id',,, 'Deaths: ', document.getElementById('paragraph3-id')]);
-create_element('span', ['span-value-class', 'span-value-deaths-id',,, '', document.getElementById('paragraph3-id')]);
+create_element('div', ['wrapper-map-class', 'wrapper-map-id', , , '', document.querySelector('.widget_3')]);
+create_element('div', ['map-class', 'map-id', , , '', document.querySelector('.wrapper-map-class')]);
+create_element('div', ['feature-info-class', 'feature-info-id', , , '', document.querySelector('.map-class')]);
+create_element('div', ['info-class', 'info-id', , , '', document.querySelector('.feature-info-class')]);
+create_element('p', ['paragraph-class', 'paragraph1-id', , , '', document.querySelector('.info-class')]);
+create_element('span', ['span-name-class', 'span-name-country-id', , , 'Country: ', document.getElementById('paragraph1-id')]);
+create_element('span', ['span-value-class', 'span-value-country-id', , , '', document.getElementById('paragraph1-id')]);
+create_element('p', ['paragraph-class', 'paragraph2-id', , , '', document.querySelector('.info-class')]);
+create_element('span', ['span-name-class', 'span-name-cases-id', , , 'Cases: ', document.getElementById('paragraph2-id')]);
+create_element('span', ['span-value-class', 'span-value-cases-id', , , '', document.getElementById('paragraph2-id')]);
+create_element('p', ['paragraph-class', 'paragraph3-id', , , '', document.querySelector('.info-class')]);
+create_element('span', ['span-name-class', 'span-name-deaths-id', , , 'Deaths: ', document.getElementById('paragraph3-id')]);
+create_element('span', ['span-value-class', 'span-value-deaths-id', , , '', document.getElementById('paragraph3-id')]);
 
-create_element('p', ['paragraph-class', 'paragraph4-id',,, '', document.querySelector('.info-class')]);
-create_element('span', ['span-name-class', 'span-name-recovered-id',,, 'Recovered: ', document.getElementById('paragraph4-id')]);
-create_element('span', ['span-value-class', 'span-value-recovered-id',,, '', document.getElementById('paragraph4-id')]);
-create_element('p', ['paragraph-class', 'paragraph5-id',,, '', document.querySelector('.info-class')]);
-create_element('span', ['span-name-class', 'span-name-active-id',,, 'Active: ', document.getElementById('paragraph5-id')]);
-create_element('span', ['span-value-class', 'span-value-active-id',,, '', document.getElementById('paragraph5-id')]);
+create_element('p', ['paragraph-class', 'paragraph4-id', , , '', document.querySelector('.info-class')]);
+create_element('span', ['span-name-class', 'span-name-recovered-id', , , 'Recovered: ', document.getElementById('paragraph4-id')]);
+create_element('span', ['span-value-class', 'span-value-recovered-id', , , '', document.getElementById('paragraph4-id')]);
+create_element('p', ['paragraph-class', 'paragraph5-id', , , '', document.querySelector('.info-class')]);
+create_element('span', ['span-name-class', 'span-name-active-id', , , 'Active: ', document.getElementById('paragraph5-id')]);
+create_element('span', ['span-value-class', 'span-value-active-id', , , '', document.getElementById('paragraph5-id')]);
 
-create_element('div', ['close-class', 'close-id',,, '<img class = "close-image-class" src="./assets/icon/icons8-cancel-50.png">', document.querySelector('.map-class')]);
-create_element('div', ['center-class', 'center-id',,, '<img class = "center-image-class" src="./assets/icon/icons8-center-of-gravity-50.png">', document.querySelector('.map-class')]);
-create_element('div', ['zoomin-class', 'zoomin-id',,, '<img class = "zoomin-image-class" src="./assets/icon/icons8-zoom-in-50.png">', document.querySelector('.map-class')]);
+create_element('div', ['close-class', 'close-id', , , '<img class = "close-image-class" src="./assets/icon/icons8-cancel-50.png">', document.querySelector('.map-class')]);
+create_element('div', ['center-class', 'center-id', , , '<img class = "center-image-class" src="./assets/icon/icons8-center-of-gravity-50.png">', document.querySelector('.map-class')]);
+create_element('div', ['zoomin-class', 'zoomin-id', , , '<img class = "zoomin-image-class" src="./assets/icon/icons8-zoom-in-50.png">', document.querySelector('.map-class')]);
 
-create_element('div', ['button-class active-class', 'cumulative-cases-id',,, '', document.querySelector('.map-class')]);
-create_element('div', ['button-text-class', 'cumulative-cases-text-id',,, 'Cumulative Cases', document.getElementById('cumulative-cases-id')]);
-create_element('div', ['button-class passive-class', 'active-cases-id',,, '', document.querySelector('.map-class')]);
-create_element('div', ['button-text-class', 'active-cases-text-id',,, 'Active Cases', document.getElementById('active-cases-id')]);
+create_element('div', ['button-class active-class', 'cumulative-cases-id', , , '', document.querySelector('.map-class')]);
+create_element('div', ['button-text-class', 'cumulative-cases-text-id', , , 'Cumulative Cases', document.getElementById('cumulative-cases-id')]);
+create_element('div', ['button-class passive-class', 'active-cases-id', , , '', document.querySelector('.map-class')]);
+create_element('div', ['button-text-class', 'active-cases-text-id', , , 'Active Cases', document.getElementById('active-cases-id')]);
 
-const osmap = L.map('map-id', {scrollWheelZoom: true, zoomControl: false}).setView([10, 0], 2);
+const osmap = L.map('map-id', { scrollWheelZoom: true, zoomControl: false }).setView([10, 0], 2);
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 }).addTo(osmap);
 
 new L.Control.Zoom({ position: 'topright' }).addTo(osmap);
 
 async function getCountries() {
   const response = await fetch('https://disease.sh/v2/countries');
-  const content = await response.json();    
+  const content = await response.json();
   for (const key in content) {
     let x, y;
     if (content[key].cases > 10000000) {
-      x = 50; 
+      x = 50;
       y = 50;
     } else if (content[key].cases > 1000000 && content[key].cases < 9999999) {
-      x = 40; 
+      x = 40;
       y = 40;
     } else if (content[key].cases > 100000 && content[key].cases < 999999) {
-      x = 30; 
+      x = 30;
       y = 30;
     } else if (content[key].cases > 10000 && content[key].cases < 99999) {
-      x = 20; 
+      x = 20;
       y = 20;
     } else {
-      x = 10; 
+      x = 10;
       y = 10;
-    } 
-    let icon_fill, tooltip_content;   
+    }
+    let icon_fill, tooltip_content;
     if (check.cumulative) {
       icon_fill = './assets/icon/icons8-filled-circle-60.png';
       tooltip_content = `Country: ${content[key].country} <br> 
@@ -93,13 +93,13 @@ async function getCountries() {
       document.querySelector('.info-class').style.height = '129px';
       document.querySelector('.center-class').style.top = '186px';
       document.querySelector('.zoomin-class').style.top = '186px';
-    }      
+    }
     const myIcon = L.icon({
       iconUrl: icon_fill,
       iconSize: [x, y]
-    });    
-    const tooltip = L.tooltip({direction: 'top'}).setContent(tooltip_content);
-    const mark = L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], {icon: myIcon}).addTo(osmap)
+    });
+    const tooltip = L.tooltip({ direction: 'top' }).setContent(tooltip_content);
+    const mark = L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], { icon: myIcon }).addTo(osmap)
       .bindTooltip(tooltip);
     mark.addEventListener('click', () => {
       document.querySelector('.feature-info-class').style.display = 'flex';
@@ -119,8 +119,8 @@ async function getCountries() {
       document.getElementById('zoomin-id').addEventListener('click', () => {
         osmap.setView([lat, lon], 6);
       });
-    });    
-  }  
+    });
+  }
 }
 document.getElementById('close-id').addEventListener('click', () => {
   document.querySelector('.feature-info-class').style.display = 'none';
@@ -141,8 +141,8 @@ document.getElementById('cumulative-cases-id').addEventListener('click', () => {
   check.cumulative = true;
   check.active = false;
   document.getElementById('cumulative-cases-id').className = 'button-class active-class';
-  document.getElementById('active-cases-id').className = 'button-class passive-class'; 
-  getCountries(); 
+  document.getElementById('active-cases-id').className = 'button-class passive-class';
+  getCountries();
 });
-  
+
 getCountries();
