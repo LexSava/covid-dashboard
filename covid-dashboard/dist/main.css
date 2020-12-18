@@ -1,8 +1,10 @@
+
 * {
   padding: 0;
   margin: 0;
   border: 0;
 }
+
 *,
 *:before,
 *:after {
@@ -10,20 +12,24 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 :focus,
 :active {
   outline: none;
 }
+
 a:focus,
 a:active {
   outline: none;
 }
+
 nav,
 footer,
 header,
 aside {
   display: block;
 }
+
 html,
 body {
   height: 100%;
@@ -35,34 +41,43 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 input,
 button,
 textarea {
   font-family: inherit;
 }
+
 input::-ms-clear {
   display: none;
 }
+
 button {
   cursor: pointer;
 }
+
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
+
 a,
 a:visited {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: none;
 }
+
 ul li {
   list-style: none;
 }
+
 img {
   vertical-align: top;
 }
+
 h1,
 h2,
 h3,
@@ -73,19 +88,24 @@ h6 {
   font-weight: inherit;
 }
 
-//-----------------------------------------------------------------------
-@import "../css/fonts";
-
+@font-face {
+  font-family: "Alfa Slab One";
+  src: url(f53d46bc54f7a54ecfe489f153bbb71a.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Mitr";
+  src: url(f801a291ed84d94a1389568ee787ecd2.ttf) format("truetype");
+}
 .header {
   width: 100%;
   background-color: #f5df4d;
   height: 10%;
   text-align: center;
   padding-top: 10px;
-  h1 {
-    font-weight: 900;
-    font-size: 1.9em;
-  }
+}
+.header h1 {
+  font-weight: 900;
+  font-size: 1.9em;
 }
 
 .content {
@@ -96,6 +116,7 @@ h6 {
   height: 80%;
   position: relative;
 }
+
 .content__widget {
   border: 1px solid black;
   background-color: #939597;
@@ -108,21 +129,25 @@ h6 {
   grid-column: 1;
   grid-row: 1;
 }
+
 .widget_1 {
   grid-column: 3;
-  grid-row: 1 / span 2;
+  grid-row: 1/span 2;
 }
+
 .widget_2 {
   grid-column: 1;
-  grid-row: 2 / span 4;
+  grid-row: 2/span 4;
 }
+
 .widget_3 {
   grid-column: 2;
-  grid-row: 1 / span 4;
+  grid-row: 1/span 4;
 }
+
 .widget_4 {
   grid-column: 3;
-  grid-row: 3 / span 4;
+  grid-row: 3/span 4;
   background-color: #222222;
   position: relative;
 }
@@ -133,51 +158,50 @@ h6 {
   height: 10%;
 }
 
-//---------------------------------------------------
 .general__information {
   display: block;
   background-color: #333333;
-  h2 {
-    font-family: "Alfa Slab One", cursive;
-    margin: 10px 5px;
-    color: #c20808;
-    font-size: 20px;
-  }
-  .general__information__heading {
-    font-family: "Mitr", sans-serif;
-    color: white;
-    font-weight: 500;
-    margin: 5px 0 0 10px;
-    font-size: 16px;
-  }
 }
-//---------------------------------------------------
+.general__information h2 {
+  font-family: "Alfa Slab One", cursive;
+  margin: 10px 5px;
+  color: #c20808;
+  font-size: 20px;
+}
+.general__information .general__information__heading {
+  font-family: "Mitr", sans-serif;
+  color: white;
+  font-weight: 500;
+  margin: 5px 0 0 10px;
+  font-size: 16px;
+}
 
 .widget_4__btn {
   width: 20px;
   height: 20px;
-  background-image: url("../../assets/icon/full-screen-arrows.svg");
+  background-image: url(f2370895a5dbf866302cde70a4c157f2.svg);
   position: absolute;
   top: 5px;
   right: 10px;
-  color: rgb(229, 255, 0);
+  color: #e5ff00;
 }
 
 .widget_4__chart {
   width: 100%;
 }
+
 .active {
   position: fixed;
   width: 100%;
   height: 100%;
   margin-bottom: 200px;
   top: 0;
-  .widget_4__btn {
-    background-image: url("../../assets/icon/contract-arrows.svg");
-  }
-  .widget_4__chart {
-    width: 85%;
-  }
+}
+.active .widget_4__btn {
+  background-image: url(a05cab7c1b76a803d14a86599804f73c.svg);
+}
+.active .widget_4__chart {
+  width: 85%;
 }
 
 .container {
@@ -202,18 +226,10 @@ h6 {
   border: 1px solid;
   border-color: white #f7f7f7 whitesmoke;
   border-radius: 3px;
-  background-image: -webkit-linear-gradient(
-    top,
-    transparent,
-    rgba(0, 0, 0, 0.06)
-  );
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
   background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
   background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
-  background-image: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.06)
-  );
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
 }
@@ -253,13 +269,10 @@ h6 {
   font-size: 12px;
   color: #62717a;
   text-shadow: 0 1px white;
-  background: #f2f2f2; /* Fallback for IE 8 */
-  background: rgba(
-    0,
-    0,
-    0,
-    0
-  ) !important; /* "transparent" doesn't work with Opera */
+  background: #f2f2f2;
+  /* Fallback for IE 8 */
+  background: rgba(0, 0, 0, 0) !important;
+  /* "transparent" doesn't work with Opera */
   border: 0;
   border-radius: 0;
   -webkit-appearance: none;
@@ -284,7 +297,6 @@ h6 {
 }
 
 /* Fix for IE 8 putting the arrows behind the select element. */
-
 .lt-ie9 .dropdown {
   z-index: 1;
 }
@@ -298,26 +310,19 @@ h6 {
 }
 
 /* Dirty fix for Firefox adding padding where it shouldn't. */
-
 @-moz-document url-prefix() {
   .dropdown-select {
     padding-left: 6px;
   }
 }
-
 .dropdown-dark {
   background: #444;
   border-color: #111111 #0a0a0a black;
-  background-image: -webkit-linear-gradient(
-    top,
-    transparent,
-    rgba(0, 0, 0, 0.4)
-  );
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
   background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
   background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1),
-    0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -332,7 +337,8 @@ h6 {
 .dropdown-dark .dropdown-select {
   color: #aaa;
   text-shadow: 0 1px black;
-  background: #444; /* Fallback for IE 8 */
+  background: #444;
+  /* Fallback for IE 8 */
 }
 
 .dropdown-dark .dropdown-select:focus {
@@ -343,3 +349,13 @@ h6 {
   background: #444;
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
 }
+@font-face {
+  font-family: "Alfa Slab One";
+  src: url(f53d46bc54f7a54ecfe489f153bbb71a.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Mitr";
+  src: url(f801a291ed84d94a1389568ee787ecd2.ttf) format("truetype");
+}
+
