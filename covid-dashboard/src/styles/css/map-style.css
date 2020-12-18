@@ -26,7 +26,7 @@
 }
 .info-class {    
     width: 98%;
-    height: 50%;
+    height: 77px;
     background: #222222;
     border: solid 1px #404040;
     color: #bdbdbd;
@@ -121,4 +121,15 @@
 #active-cases-id {
     top: 550px;
     left: 170px;
+}
+#paragraph4-id, #paragraph5-id {
+    display: none;
+}
+#span-value-active-id {
+    font-weight: 100;
+    color: #26e07f;
+}
+#span-value-recovered-id {
+    font-weight: 100;
+    color: #e0bf26;
 }

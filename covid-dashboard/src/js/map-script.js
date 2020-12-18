@@ -26,6 +26,14 @@ create_element('span', ['span-value-class', 'span-value-cases-id',,, '', documen
 create_element('p', ['paragraph-class', 'paragraph3-id',,, '', document.querySelector('.info-class')]);
 create_element('span', ['span-name-class', 'span-name-deaths-id',,, 'Deaths: ', document.getElementById('paragraph3-id')]);
 create_element('span', ['span-value-class', 'span-value-deaths-id',,, '', document.getElementById('paragraph3-id')]);
+
+create_element('p', ['paragraph-class', 'paragraph4-id',,, '', document.querySelector('.info-class')]);
+create_element('span', ['span-name-class', 'span-name-recovered-id',,, 'Recovered: ', document.getElementById('paragraph4-id')]);
+create_element('span', ['span-value-class', 'span-value-recovered-id',,, '', document.getElementById('paragraph4-id')]);
+create_element('p', ['paragraph-class', 'paragraph5-id',,, '', document.querySelector('.info-class')]);
+create_element('span', ['span-name-class', 'span-name-active-id',,, 'Active: ', document.getElementById('paragraph5-id')]);
+create_element('span', ['span-value-class', 'span-value-active-id',,, '', document.getElementById('paragraph5-id')]);
+
 create_element('div', ['close-class', 'close-id',,, '<img class = "close-image-class" src="./assets/icon/icons8-cancel-50.png">', document.querySelector('.map-class')]);
 create_element('div', ['center-class', 'center-id',,, '<img class = "center-image-class" src="./assets/icon/icons8-center-of-gravity-50.png">', document.querySelector('.map-class')]);
 create_element('div', ['zoomin-class', 'zoomin-id',,, '<img class = "zoomin-image-class" src="./assets/icon/icons8-zoom-in-50.png">', document.querySelector('.map-class')]);
@@ -62,13 +70,35 @@ async function getCountries() {
     } else {
       x = 10; 
       y = 10;
-    }
+    } 
+    let icon_fill, tooltip_content;   
+    if (check.cumulative) {
+      icon_fill = './assets/icon/icons8-filled-circle-60.png';
+      tooltip_content = `Country: ${content[key].country} <br> 
+        Cases: ${content[key].cases.toLocaleString()} <br> Deaths: ${content[key].deaths.toLocaleString()}`;
+      document.getElementById('paragraph4-id').style.display = 'none';
+      document.getElementById('paragraph5-id').style.display = 'none';
+      document.querySelector('.feature-info-class').style.height = '155px';
+      document.querySelector('.info-class').style.height = '77px';
+      document.querySelector('.center-class').style.top = '134px';
+      document.querySelector('.zoomin-class').style.top = '134px';
+    } else if (check.active) {
+      icon_fill = './assets/icon/icons8-filled-green-circle-60.png';
+      tooltip_content = `Country: ${content[key].country} <br> 
+        Cases: ${content[key].cases.toLocaleString()} <br> Deaths: ${content[key].deaths.toLocaleString()} <br> 
+        Recovered: ${content[key].recovered.toLocaleString()} <br> Active: ${content[key].active.toLocaleString()}`;
+      document.getElementById('paragraph4-id').style.display = 'block';
+      document.getElementById('paragraph5-id').style.display = 'block';
+      document.querySelector('.feature-info-class').style.height = '207px';
+      document.querySelector('.info-class').style.height = '129px';
+      document.querySelector('.center-class').style.top = '186px';
+      document.querySelector('.zoomin-class').style.top = '186px';
+    }      
     const myIcon = L.icon({
-      iconUrl: './assets/icon/icons8-filled-circle-60.png',
+      iconUrl: icon_fill,
       iconSize: [x, y]
     });    
-    const tooltip = L.tooltip({direction: 'top'}).setContent(`Country: ${content[key].country} <br> 
-      Cases: ${content[key].cases.toLocaleString()} <br> Deaths: ${content[key].deaths.toLocaleString()}`);
+    const tooltip = L.tooltip({direction: 'top'}).setContent(tooltip_content);
     const mark = L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], {icon: myIcon}).addTo(osmap)
       .bindTooltip(tooltip);
     mark.addEventListener('click', () => {
@@ -79,6 +109,8 @@ async function getCountries() {
       document.getElementById('span-value-country-id').innerHTML = content[key].country;
       document.getElementById('span-value-cases-id').innerHTML = content[key].cases.toLocaleString();
       document.getElementById('span-value-deaths-id').innerHTML = content[key].deaths.toLocaleString();
+      document.getElementById('span-value-recovered-id').innerHTML = content[key].recovered.toLocaleString();
+      document.getElementById('span-value-active-id').innerHTML = content[key].active.toLocaleString();
       const lat = content[key].countryInfo.lat;
       const lon = content[key].countryInfo.long;
       document.getElementById('center-id').addEventListener('click', () => {
@@ -102,13 +134,15 @@ document.getElementById('active-cases-id').addEventListener('click', () => {
   check.active = true;
   document.getElementById('cumulative-cases-id').className = 'button-class passive-class';
   document.getElementById('active-cases-id').className = 'button-class active-class';
+  getCountries();
 });
 
 document.getElementById('cumulative-cases-id').addEventListener('click', () => {
   check.cumulative = true;
   check.active = false;
   document.getElementById('cumulative-cases-id').className = 'button-class active-class';
-  document.getElementById('active-cases-id').className = 'button-class passive-class';  
+  document.getElementById('active-cases-id').className = 'button-class passive-class'; 
+  getCountries(); 
 });
   
 getCountries();
