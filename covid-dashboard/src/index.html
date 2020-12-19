@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<lang lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <title>COVID-19 Dashboard</title>
-</head>
+    <head>
+        meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico" type="image/png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="./styles/css/map-style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    </head>
 
-<body>
-    <header class="header">
-        <h1>COVID-19 Dashboard</h1>
-    </header>
-    <div class="content">
-        <section class="content__widget widget_0">
-            <h2>Global information for 2020</h2>
-        </section>
-        <section class="content__widget widget_1">widget 1</section>
-        <section class="content__widget widget_2">widget 2</section>
-        <section class="content__widget widget_3">widget 3</section>
-        <section class="content__widget widget_4">
-            <form class="container">
-                <div class="dropdown dropdown-dark">
-                    <select name="one" class="dropdown-select">
-                        <option value="All countries">All countries</option>
-                        <option value="option" id="Option">Option</option>
-                    </select>
-                </div>
-            </form>
+    <body>
+        <header class="header">
+            <h1>COVID-19 Dashboard</h1>
+        </header>
+        <div class="content">
+            <section class="content__widget widget_0">
+                <h2>Global information for 2020</h2>
+            </section>
+            <section class="content__widget widget_1">widget 1</section>
+            <section class="content__widget widget_2">widget 2</section>
+            <section class="content__widget widget_3">widget 3</section>
+            <section class="content__widget widget_4">
+                <form class="container">
+                    <div class="dropdown dropdown-dark">
+                        <select name="one" class="dropdown-select">
+                            <option value="All countries">All countries</option>
+                            <option value="option" id="Option">Option</option>
+                        </select>
+                    </div>
+                </form>
 
-            <button class=" widget_4__btn"></button>
-            <div class="widget_4__chart"><canvas id="myChart"></canvas></div>
-        </section>
-    </div>
-    <footer class="footer"></footer>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+                <button class=" widget_4__btn"></button>
+                <div class="widget_4__chart"><canvas id="myChart"></canvas></div>
+            </section>
+        </div>
+        <footer class="footer"></footer>
 
-</body>
+        <script src="./js/map-script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-</html>
+    </body>
+
+</lang>
