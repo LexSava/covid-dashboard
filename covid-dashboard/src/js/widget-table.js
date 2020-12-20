@@ -23,7 +23,7 @@ class Table {
   constructor(url) {
     this.url = url;
     this.period = 'all';
-    this.value = 'perOneHundredThousand';
+    this.value = 'absolute';
   }
 
   async getRequest() {
