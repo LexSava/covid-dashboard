@@ -1,3 +1,9 @@
+import red_icon from '../assets/icon/icons8-filled-circle-60.png';
+import green_icon from '../assets/icon/icons8-filled-green-circle-60.png';
+import cancel from '../assets/icon/icons8-cancel-50.png';
+import center from '../assets/icon/icons8-center-of-gravity-50.png';
+import zoomin from '../assets/icon/icons8-zoom-in-50.png';
+
 function create_element(type, options) {
   const elem = document.createElement(type);
   elem.className = options[0];
@@ -34,9 +40,9 @@ create_element('p', ['paragraph-class', 'paragraph5-id', , , '', document.queryS
 create_element('span', ['span-name-class', 'span-name-active-id', , , 'Active: ', document.getElementById('paragraph5-id')]);
 create_element('span', ['span-value-class', 'span-value-active-id', , , '', document.getElementById('paragraph5-id')]);
 
-create_element('div', ['close-class', 'close-id', , , '<img class = "close-image-class" src="./assets/icon/icons8-cancel-50.png">', document.querySelector('.map-class')]);
-create_element('div', ['center-class', 'center-id', , , '<img class = "center-image-class" src="./assets/icon/icons8-center-of-gravity-50.png">', document.querySelector('.map-class')]);
-create_element('div', ['zoomin-class', 'zoomin-id', , , '<img class = "zoomin-image-class" src="./assets/icon/icons8-zoom-in-50.png">', document.querySelector('.map-class')]);
+create_element('div', ['close-class', 'close-id', , , `<img class = "close-image-class" src=${cancel}>`, document.querySelector('.map-class')]);
+create_element('div', ['center-class', 'center-id', , , `<img class = "center-image-class" src=${center}>`, document.querySelector('.map-class')]);
+create_element('div', ['zoomin-class', 'zoomin-id', , , `<img class = "zoomin-image-class" src=${zoomin}>`, document.querySelector('.map-class')]);
 
 create_element('div', ['button-class active-class', 'cumulative-cases-id', , , '', document.querySelector('.map-class')]);
 create_element('div', ['button-text-class', 'cumulative-cases-text-id', , , 'Cumulative Cases', document.getElementById('cumulative-cases-id')]);
@@ -72,8 +78,8 @@ async function getCountries() {
       y = 10;
     }
     let icon_fill, tooltip_content;
-    if (check.cumulative) {
-      icon_fill = './assets/icon/icons8-filled-circle-60.png';
+    if (check.cumulative) {      
+      icon_fill = red_icon;
       tooltip_content = `Country: ${content[key].country} <br> 
         Cases: ${content[key].cases.toLocaleString()} <br> Deaths: ${content[key].deaths.toLocaleString()}`;
       document.getElementById('paragraph4-id').style.display = 'none';
@@ -83,7 +89,7 @@ async function getCountries() {
       document.querySelector('.center-class').style.top = '134px';
       document.querySelector('.zoomin-class').style.top = '134px';
     } else if (check.active) {
-      icon_fill = './assets/icon/icons8-filled-green-circle-60.png';
+      icon_fill = green_icon;
       tooltip_content = `Country: ${content[key].country} <br> 
         Cases: ${content[key].cases.toLocaleString()} <br> Deaths: ${content[key].deaths.toLocaleString()} <br> 
         Recovered: ${content[key].recovered.toLocaleString()} <br> Active: ${content[key].active.toLocaleString()}`;
