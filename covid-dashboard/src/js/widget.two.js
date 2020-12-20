@@ -53,6 +53,7 @@ function sortingByCases() {
 
     for (let key in results) {
         CreatesListCountries(results[key].countryInfo.flag, results[key].country, results[key].cases)
+        console.log(typeof results[key].cases);
     }
 }
 
