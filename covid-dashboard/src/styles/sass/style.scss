@@ -349,25 +349,69 @@ h6 {
 .widget_2 {
   display: block;
   overflow: auto;
+  background-color: #333333;
 }
+::-webkit-scrollbar {
+  width: 24px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: #222222;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #c20808;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c2080894;
+}
+
 .widget__two__heading {
   font-family: "Alfa Slab One", cursive;
+  letter-spacing: 2px;
   margin: 10px 5px;
   color: #c20808;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
 }
 .widget__two__block__indicators {
   text-align: center;
+  font-family: "Mitr", sans-serif;
 }
 .widget__two__indicators {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 5px;
+  cursor: pointer;
+  font-family: "Mitr", sans-serif;
 }
 .widget__two__block__countries {
   margin-top: 15px;
+  font-family: "Mitr", sans-serif;
+}
+.widget__two__countries {
+  margin: 10px 10px 0 10px;
+
+  padding-bottom: 5px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #c20808;
+  cursor: pointer;
 }
 .widget__two__flag {
   width: 30px;
+}
+.widget__two__name__countries {
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.widget__two__indicator__countries {
+  color: #c20808;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 700;
 }

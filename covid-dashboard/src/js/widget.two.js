@@ -17,7 +17,7 @@ function CreatesListCountries(flag, country, indicator) {
 
     const newIndicatorCountry = document.createElement('span');
     newIndicatorCountry.classList.add('widget__two__indicator__countries');
-    newIndicatorCountry.innerHTML = indicator;
+    newIndicatorCountry.innerHTML = ` - ${indicator}`;
 
     newСountryСontainer.appendChild(newFlagImage);
     newСountryСontainer.appendChild(newNameCountry);
@@ -30,12 +30,15 @@ function CreatesListCountries(flag, country, indicator) {
 async function GetCountryData() {
     const response = await fetch('https://disease.sh/v2/countries');
     const results = await response.json();
-
+    results.sort(function (a, b) {
+        return b.cases - a.cases;
+    })
     console.log(results);
-    console.log(results[1].countryInfo.flag);
+
 
     for (const key in results) {
         CreatesListCountries(results[key].countryInfo.flag, results[key].country, results[key].cases)
+        console.log(typeof results[key].cases);
     }
 }
 
