@@ -10,7 +10,7 @@
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./js/babel.js":
-/*!*********************!*
+/*!*********************!*\
   !*** ./js/babel.js ***!
   \*********************/
 /***/ (function() {
@@ -20,28 +20,29 @@ eval("\n\n//# sourceURL=webpack:///./js/babel.js?");
 /***/ }),
 
 /***/ "./js/main.js":
-/*!********************!*
+/*!********************!*\
   !*** ./js/main.js ***!
   \********************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./babel */ \"./js/babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./widget.zero */ \"./js/widget.zero.js\");\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_widget_zero__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/css/style.css */ \"./styles/css/style.css\");\n/* harmony import */ var _styles_sass_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/sass/style.scss */ \"./styles/sass/style.scss\");\n/* harmony import */ var _styles_css_fonts_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/css/fonts.css */ \"./styles/css/fonts.css\");\n/* harmony import */ var _map_script__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./map-script */ \"./js/map-script.js\");\n/* harmony import */ var _map_script__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_map_script__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _styles_css_map_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/css/map-style.css */ \"./styles/css/map-style.css\");\n/* harmony import */ var _widget_four__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widget.four */ \"./js/widget.four.js\");\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./babel */ \"./js/babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./widget.zero */ \"./js/widget.zero.js\");\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_widget_zero__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/css/style.css */ \"./styles/css/style.css\");\n/* harmony import */ var _styles_sass_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/sass/style.scss */ \"./styles/sass/style.scss\");\n/* harmony import */ var _styles_css_fonts_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/css/fonts.css */ \"./styles/css/fonts.css\");\n/* harmony import */ var _map_script__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./map-script */ \"./js/map-script.js\");\n/* harmony import */ var _styles_css_map_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/css/map-style.css */ \"./styles/css/map-style.css\");\n/* harmony import */ var _widget_four__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widget.four */ \"./js/widget.four.js\");\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
 
 /***/ }),
 
 /***/ "./js/map-script.js":
-/*!**************************!*
+/*!**************************!*\
   !*** ./js/map-script.js ***!
   \**************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nfunction create_element(type, options) {\n  var elem = document.createElement(type);\n  elem.className = options[0];\n  elem.id = options[1];\n  if (options[2] !== undefined) elem.setAttribute(options[2], options[3]);\n  elem.innerHTML = options[4];\n  options[5].append(elem);\n  return elem;\n}\n\nvar check = {\n  cumulative: true,\n  active: false\n};\ndocument.querySelector('.widget_3').innerHTML = '';\ncreate_element('div', ['wrapper-map-class', 'wrapper-map-id',,, '', document.querySelector('.widget_3')]);\ncreate_element('div', ['map-class', 'map-id',,, '', document.querySelector('.wrapper-map-class')]);\ncreate_element('div', ['feature-info-class', 'feature-info-id',,, '', document.querySelector('.map-class')]);\ncreate_element('div', ['info-class', 'info-id',,, '', document.querySelector('.feature-info-class')]);\ncreate_element('p', ['paragraph-class', 'paragraph1-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-country-id',,, 'Country: ', document.getElementById('paragraph1-id')]);\ncreate_element('span', ['span-value-class', 'span-value-country-id',,, '', document.getElementById('paragraph1-id')]);\ncreate_element('p', ['paragraph-class', 'paragraph2-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-cases-id',,, 'Cases: ', document.getElementById('paragraph2-id')]);\ncreate_element('span', ['span-value-class', 'span-value-cases-id',,, '', document.getElementById('paragraph2-id')]);\ncreate_element('p', ['paragraph-class', 'paragraph3-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-deaths-id',,, 'Deaths: ', document.getElementById('paragraph3-id')]);\ncreate_element('span', ['span-value-class', 'span-value-deaths-id',,, '', document.getElementById('paragraph3-id')]);\ncreate_element('p', ['paragraph-class', 'paragraph4-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-recovered-id',,, 'Recovered: ', document.getElementById('paragraph4-id')]);\ncreate_element('span', ['span-value-class', 'span-value-recovered-id',,, '', document.getElementById('paragraph4-id')]);\ncreate_element('p', ['paragraph-class', 'paragraph5-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-active-id',,, 'Active: ', document.getElementById('paragraph5-id')]);\ncreate_element('span', ['span-value-class', 'span-value-active-id',,, '', document.getElementById('paragraph5-id')]);\ncreate_element('div', ['close-class', 'close-id',,, '<img class = \"close-image-class\" src=\"./assets/icon/icons8-cancel-50.png\">', document.querySelector('.map-class')]);\ncreate_element('div', ['center-class', 'center-id',,, '<img class = \"center-image-class\" src=\"./assets/icon/icons8-center-of-gravity-50.png\">', document.querySelector('.map-class')]);\ncreate_element('div', ['zoomin-class', 'zoomin-id',,, '<img class = \"zoomin-image-class\" src=\"./assets/icon/icons8-zoom-in-50.png\">', document.querySelector('.map-class')]);\ncreate_element('div', ['button-class active-class', 'cumulative-cases-id',,, '', document.querySelector('.map-class')]);\ncreate_element('div', ['button-text-class', 'cumulative-cases-text-id',,, 'Cumulative Cases', document.getElementById('cumulative-cases-id')]);\ncreate_element('div', ['button-class passive-class', 'active-cases-id',,, '', document.querySelector('.map-class')]);\ncreate_element('div', ['button-text-class', 'active-cases-text-id',,, 'Active Cases', document.getElementById('active-cases-id')]);\nvar osmap = L.map('map-id', {\n  scrollWheelZoom: true,\n  zoomControl: false\n}).setView([10, 0], 2);\nL.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {\n  attribution: '&copy; <a href=\"https://stadiamaps.com/\">Stadia Maps</a>, &copy; <a href=\"https://openmaptiles.org/\">OpenMapTiles</a> &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors'\n}).addTo(osmap);\nnew L.Control.Zoom({\n  position: 'topright'\n}).addTo(osmap);\n\nfunction getCountries() {\n  return _getCountries.apply(this, arguments);\n}\n\nfunction _getCountries() {\n  _getCountries = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    var response, content, _loop, key;\n\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch('https://disease.sh/v2/countries');\n\n          case 2:\n            response = _context.sent;\n            _context.next = 5;\n            return response.json();\n\n          case 5:\n            content = _context.sent;\n\n            _loop = function _loop(key) {\n              var x = void 0,\n                  y = void 0;\n\n              if (content[key].cases > 10000000) {\n                x = 50;\n                y = 50;\n              } else if (content[key].cases > 1000000 && content[key].cases < 9999999) {\n                x = 40;\n                y = 40;\n              } else if (content[key].cases > 100000 && content[key].cases < 999999) {\n                x = 30;\n                y = 30;\n              } else if (content[key].cases > 10000 && content[key].cases < 99999) {\n                x = 20;\n                y = 20;\n              } else {\n                x = 10;\n                y = 10;\n              }\n\n              var icon_fill = void 0,\n                  tooltip_content = void 0;\n\n              if (check.cumulative) {\n                icon_fill = './assets/icon/icons8-filled-circle-60.png';\n                tooltip_content = \"Country: \".concat(content[key].country, \" <br> \\n        Cases: \").concat(content[key].cases.toLocaleString(), \" <br> Deaths: \").concat(content[key].deaths.toLocaleString());\n                document.getElementById('paragraph4-id').style.display = 'none';\n                document.getElementById('paragraph5-id').style.display = 'none';\n                document.querySelector('.feature-info-class').style.height = '155px';\n                document.querySelector('.info-class').style.height = '77px';\n                document.querySelector('.center-class').style.top = '134px';\n                document.querySelector('.zoomin-class').style.top = '134px';\n              } else if (check.active) {\n                icon_fill = './assets/icon/icons8-filled-green-circle-60.png';\n                tooltip_content = \"Country: \".concat(content[key].country, \" <br> \\n        Cases: \").concat(content[key].cases.toLocaleString(), \" <br> Deaths: \").concat(content[key].deaths.toLocaleString(), \" <br> \\n        Recovered: \").concat(content[key].recovered.toLocaleString(), \" <br> Active: \").concat(content[key].active.toLocaleString());\n                document.getElementById('paragraph4-id').style.display = 'block';\n                document.getElementById('paragraph5-id').style.display = 'block';\n                document.querySelector('.feature-info-class').style.height = '207px';\n                document.querySelector('.info-class').style.height = '129px';\n                document.querySelector('.center-class').style.top = '186px';\n                document.querySelector('.zoomin-class').style.top = '186px';\n              }\n\n              var myIcon = L.icon({\n                iconUrl: icon_fill,\n                iconSize: [x, y]\n              });\n              var tooltip = L.tooltip({\n                direction: 'top'\n              }).setContent(tooltip_content);\n              var mark = L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], {\n                icon: myIcon\n              }).addTo(osmap).bindTooltip(tooltip);\n              mark.addEventListener('click', function () {\n                document.querySelector('.feature-info-class').style.display = 'flex';\n                document.querySelector('.close-class').style.display = 'flex';\n                document.querySelector('.center-class').style.display = 'flex';\n                document.querySelector('.zoomin-class').style.display = 'flex';\n                document.getElementById('span-value-country-id').innerHTML = content[key].country;\n                document.getElementById('span-value-cases-id').innerHTML = content[key].cases.toLocaleString();\n                document.getElementById('span-value-deaths-id').innerHTML = content[key].deaths.toLocaleString();\n                document.getElementById('span-value-recovered-id').innerHTML = content[key].recovered.toLocaleString();\n                document.getElementById('span-value-active-id').innerHTML = content[key].active.toLocaleString();\n                var lat = content[key].countryInfo.lat;\n                var lon = content[key].countryInfo.long;\n                document.getElementById('center-id').addEventListener('click', function () {\n                  osmap.setView([lat, lon]);\n                });\n                document.getElementById('zoomin-id').addEventListener('click', function () {\n                  osmap.setView([lat, lon], 6);\n                });\n              });\n            };\n\n            for (key in content) {\n              _loop(key);\n            }\n\n          case 8:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _getCountries.apply(this, arguments);\n}\n\ndocument.getElementById('close-id').addEventListener('click', function () {\n  document.querySelector('.feature-info-class').style.display = 'none';\n  document.querySelector('.close-class').style.display = 'none';\n  document.querySelector('.center-class').style.display = 'none';\n  document.querySelector('.zoomin-class').style.display = 'none';\n});\ndocument.getElementById('active-cases-id').addEventListener('click', function () {\n  check.cumulative = false;\n  check.active = true;\n  document.getElementById('cumulative-cases-id').className = 'button-class passive-class';\n  document.getElementById('active-cases-id').className = 'button-class active-class';\n  getCountries();\n});\ndocument.getElementById('cumulative-cases-id').addEventListener('click', function () {\n  check.cumulative = true;\n  check.active = false;\n  document.getElementById('cumulative-cases-id').className = 'button-class active-class';\n  document.getElementById('active-cases-id').className = 'button-class passive-class';\n  getCountries();\n});\ngetCountries();\n\n//# sourceURL=webpack:///./js/map-script.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_icon_icons8_filled_circle_60_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/icon/icons8-filled-circle-60.png */ \"./assets/icon/icons8-filled-circle-60.png\");\n/* harmony import */ var _assets_icon_icons8_filled_green_circle_60_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/icon/icons8-filled-green-circle-60.png */ \"./assets/icon/icons8-filled-green-circle-60.png\");\n/* harmony import */ var _assets_icon_icons8_cancel_50_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/icon/icons8-cancel-50.png */ \"./assets/icon/icons8-cancel-50.png\");\n/* harmony import */ var _assets_icon_icons8_center_of_gravity_50_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/icon/icons8-center-of-gravity-50.png */ \"./assets/icon/icons8-center-of-gravity-50.png\");\n/* harmony import */ var _assets_icon_icons8_zoom_in_50_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/icon/icons8-zoom-in-50.png */ \"./assets/icon/icons8-zoom-in-50.png\");\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n\n\n\n\n\n\nfunction create_element(type, options) {\n  var elem = document.createElement(type);\n  elem.className = options[0];\n  elem.id = options[1];\n  if (options[2] !== undefined) elem.setAttribute(options[2], options[3]);\n  elem.innerHTML = options[4];\n  options[5].append(elem);\n  return elem;\n}\n\nvar check = {\n  cumulative: true,\n  active: false\n};\ndocument.querySelector('.widget_3').innerHTML = '';\ncreate_element('div', ['wrapper-map-class', 'wrapper-map-id',,, '', document.querySelector('.widget_3')]);\ncreate_element('div', ['map-class', 'map-id',,, '', document.querySelector('.wrapper-map-class')]);\ncreate_element('div', ['feature-info-class', 'feature-info-id',,, '', document.querySelector('.map-class')]);\ncreate_element('div', ['info-class', 'info-id',,, '', document.querySelector('.feature-info-class')]);\ncreate_element('p', ['paragraph-class', 'paragraph1-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-country-id',,, 'Country: ', document.getElementById('paragraph1-id')]);\ncreate_element('span', ['span-value-class', 'span-value-country-id',,, '', document.getElementById('paragraph1-id')]);\ncreate_element('p', ['paragraph-class', 'paragraph2-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-cases-id',,, 'Cases: ', document.getElementById('paragraph2-id')]);\ncreate_element('span', ['span-value-class', 'span-value-cases-id',,, '', document.getElementById('paragraph2-id')]);\ncreate_element('p', ['paragraph-class', 'paragraph3-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-deaths-id',,, 'Deaths: ', document.getElementById('paragraph3-id')]);\ncreate_element('span', ['span-value-class', 'span-value-deaths-id',,, '', document.getElementById('paragraph3-id')]);\ncreate_element('p', ['paragraph-class', 'paragraph4-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-recovered-id',,, 'Recovered: ', document.getElementById('paragraph4-id')]);\ncreate_element('span', ['span-value-class', 'span-value-recovered-id',,, '', document.getElementById('paragraph4-id')]);\ncreate_element('p', ['paragraph-class', 'paragraph5-id',,, '', document.querySelector('.info-class')]);\ncreate_element('span', ['span-name-class', 'span-name-active-id',,, 'Active: ', document.getElementById('paragraph5-id')]);\ncreate_element('span', ['span-value-class', 'span-value-active-id',,, '', document.getElementById('paragraph5-id')]);\ncreate_element('div', ['close-class', 'close-id',,, \"<img class = \\\"close-image-class\\\" src=\".concat(_assets_icon_icons8_cancel_50_png__WEBPACK_IMPORTED_MODULE_2__.default, \">\"), document.querySelector('.map-class')]);\ncreate_element('div', ['center-class', 'center-id',,, \"<img class = \\\"center-image-class\\\" src=\".concat(_assets_icon_icons8_center_of_gravity_50_png__WEBPACK_IMPORTED_MODULE_3__.default, \">\"), document.querySelector('.map-class')]);\ncreate_element('div', ['zoomin-class', 'zoomin-id',,, \"<img class = \\\"zoomin-image-class\\\" src=\".concat(_assets_icon_icons8_zoom_in_50_png__WEBPACK_IMPORTED_MODULE_4__.default, \">\"), document.querySelector('.map-class')]);\ncreate_element('div', ['button-class active-class', 'cumulative-cases-id',,, '', document.querySelector('.map-class')]);\ncreate_element('div', ['button-text-class', 'cumulative-cases-text-id',,, 'Cumulative Cases', document.getElementById('cumulative-cases-id')]);\ncreate_element('div', ['button-class passive-class', 'active-cases-id',,, '', document.querySelector('.map-class')]);\ncreate_element('div', ['button-text-class', 'active-cases-text-id',,, 'Active Cases', document.getElementById('active-cases-id')]);\nvar osmap = L.map('map-id', {\n  scrollWheelZoom: true,\n  zoomControl: false\n}).setView([10, 0], 2);\nL.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {\n  attribution: '&copy; <a href=\"https://stadiamaps.com/\">Stadia Maps</a>, &copy; <a href=\"https://openmaptiles.org/\">OpenMapTiles</a> &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors'\n}).addTo(osmap);\nnew L.Control.Zoom({\n  position: 'topright'\n}).addTo(osmap);\n\nfunction getCountries() {\n  return _getCountries.apply(this, arguments);\n}\n\nfunction _getCountries() {\n  _getCountries = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    var response, content, _loop, key;\n\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch('https://disease.sh/v2/countries');\n\n          case 2:\n            response = _context.sent;\n            _context.next = 5;\n            return response.json();\n\n          case 5:\n            content = _context.sent;\n\n            _loop = function _loop(key) {\n              var x = void 0,\n                  y = void 0;\n\n              if (content[key].cases > 10000000) {\n                x = 50;\n                y = 50;\n              } else if (content[key].cases > 1000000 && content[key].cases < 9999999) {\n                x = 40;\n                y = 40;\n              } else if (content[key].cases > 100000 && content[key].cases < 999999) {\n                x = 30;\n                y = 30;\n              } else if (content[key].cases > 10000 && content[key].cases < 99999) {\n                x = 20;\n                y = 20;\n              } else {\n                x = 10;\n                y = 10;\n              }\n\n              var icon_fill = void 0,\n                  tooltip_content = void 0;\n\n              if (check.cumulative) {\n                icon_fill = _assets_icon_icons8_filled_circle_60_png__WEBPACK_IMPORTED_MODULE_0__.default;\n                tooltip_content = \"Country: \".concat(content[key].country, \" <br> \\n        Cases: \").concat(content[key].cases.toLocaleString(), \" <br> Deaths: \").concat(content[key].deaths.toLocaleString());\n                document.getElementById('paragraph4-id').style.display = 'none';\n                document.getElementById('paragraph5-id').style.display = 'none';\n                document.querySelector('.feature-info-class').style.height = '155px';\n                document.querySelector('.info-class').style.height = '77px';\n                document.querySelector('.center-class').style.top = '134px';\n                document.querySelector('.zoomin-class').style.top = '134px';\n              } else if (check.active) {\n                icon_fill = _assets_icon_icons8_filled_green_circle_60_png__WEBPACK_IMPORTED_MODULE_1__.default;\n                tooltip_content = \"Country: \".concat(content[key].country, \" <br> \\n        Cases: \").concat(content[key].cases.toLocaleString(), \" <br> Deaths: \").concat(content[key].deaths.toLocaleString(), \" <br> \\n        Recovered: \").concat(content[key].recovered.toLocaleString(), \" <br> Active: \").concat(content[key].active.toLocaleString());\n                document.getElementById('paragraph4-id').style.display = 'block';\n                document.getElementById('paragraph5-id').style.display = 'block';\n                document.querySelector('.feature-info-class').style.height = '207px';\n                document.querySelector('.info-class').style.height = '129px';\n                document.querySelector('.center-class').style.top = '186px';\n                document.querySelector('.zoomin-class').style.top = '186px';\n              }\n\n              var myIcon = L.icon({\n                iconUrl: icon_fill,\n                iconSize: [x, y]\n              });\n              var tooltip = L.tooltip({\n                direction: 'top'\n              }).setContent(tooltip_content);\n              var mark = L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], {\n                icon: myIcon\n              }).addTo(osmap).bindTooltip(tooltip);\n              mark.addEventListener('click', function () {\n                document.querySelector('.feature-info-class').style.display = 'flex';\n                document.querySelector('.close-class').style.display = 'flex';\n                document.querySelector('.center-class').style.display = 'flex';\n                document.querySelector('.zoomin-class').style.display = 'flex';\n                document.getElementById('span-value-country-id').innerHTML = content[key].country;\n                document.getElementById('span-value-cases-id').innerHTML = content[key].cases.toLocaleString();\n                document.getElementById('span-value-deaths-id').innerHTML = content[key].deaths.toLocaleString();\n                document.getElementById('span-value-recovered-id').innerHTML = content[key].recovered.toLocaleString();\n                document.getElementById('span-value-active-id').innerHTML = content[key].active.toLocaleString();\n                var lat = content[key].countryInfo.lat;\n                var lon = content[key].countryInfo.long;\n                document.getElementById('center-id').addEventListener('click', function () {\n                  osmap.setView([lat, lon]);\n                });\n                document.getElementById('zoomin-id').addEventListener('click', function () {\n                  osmap.setView([lat, lon], 6);\n                });\n              });\n            };\n\n            for (key in content) {\n              _loop(key);\n            }\n\n          case 8:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _getCountries.apply(this, arguments);\n}\n\ndocument.getElementById('close-id').addEventListener('click', function () {\n  document.querySelector('.feature-info-class').style.display = 'none';\n  document.querySelector('.close-class').style.display = 'none';\n  document.querySelector('.center-class').style.display = 'none';\n  document.querySelector('.zoomin-class').style.display = 'none';\n});\ndocument.getElementById('active-cases-id').addEventListener('click', function () {\n  check.cumulative = false;\n  check.active = true;\n  document.getElementById('cumulative-cases-id').className = 'button-class passive-class';\n  document.getElementById('active-cases-id').className = 'button-class active-class';\n  getCountries();\n});\ndocument.getElementById('cumulative-cases-id').addEventListener('click', function () {\n  check.cumulative = true;\n  check.active = false;\n  document.getElementById('cumulative-cases-id').className = 'button-class active-class';\n  document.getElementById('active-cases-id').className = 'button-class passive-class';\n  getCountries();\n});\ngetCountries();\n\n//# sourceURL=webpack:///./js/map-script.js?");
 
 /***/ }),
 
 /***/ "./js/widget.four.js":
-/*!***************************!*
+/*!***************************!*\
   !*** ./js/widget.four.js ***!
   \***************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -52,7 +53,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var char
 /***/ }),
 
 /***/ "./js/widget.zero.js":
-/*!***************************!*
+/*!***************************!*\
   !*** ./js/widget.zero.js ***!
   \***************************/
 /***/ (function() {
@@ -61,8 +62,63 @@ eval("function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg)
 
 /***/ }),
 
+/***/ "./assets/icon/icons8-cancel-50.png":
+/*!******************************************!*\
+  !*** ./assets/icon/icons8-cancel-50.png ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"3a927d234c7a54d72345308282f390c5.png\");\n\n//# sourceURL=webpack:///./assets/icon/icons8-cancel-50.png?");
+
+/***/ }),
+
+/***/ "./assets/icon/icons8-center-of-gravity-50.png":
+/*!*****************************************************!*\
+  !*** ./assets/icon/icons8-center-of-gravity-50.png ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"6adfd5e65c3fd7f22a6d2c41491dc77f.png\");\n\n//# sourceURL=webpack:///./assets/icon/icons8-center-of-gravity-50.png?");
+
+/***/ }),
+
+/***/ "./assets/icon/icons8-filled-circle-60.png":
+/*!*************************************************!*\
+  !*** ./assets/icon/icons8-filled-circle-60.png ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"dc42ba8e334f255dcc35d801b245d217.png\");\n\n//# sourceURL=webpack:///./assets/icon/icons8-filled-circle-60.png?");
+
+/***/ }),
+
+/***/ "./assets/icon/icons8-filled-green-circle-60.png":
+/*!*******************************************************!*\
+  !*** ./assets/icon/icons8-filled-green-circle-60.png ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"02987b9ff14ca82fad6e0a872a26c55b.png\");\n\n//# sourceURL=webpack:///./assets/icon/icons8-filled-green-circle-60.png?");
+
+/***/ }),
+
+/***/ "./assets/icon/icons8-zoom-in-50.png":
+/*!*******************************************!*\
+  !*** ./assets/icon/icons8-zoom-in-50.png ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"33e894ff12e75088a7c3a9a512c43904.png\");\n\n//# sourceURL=webpack:///./assets/icon/icons8-zoom-in-50.png?");
+
+/***/ }),
+
 /***/ "./styles/css/fonts.css":
-/*!******************************!*
+/*!******************************!*\
   !*** ./styles/css/fonts.css ***!
   \******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -73,7 +129,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ }),
 
 /***/ "./styles/css/map-style.css":
-/*!**********************************!*
+/*!**********************************!*\
   !*** ./styles/css/map-style.css ***!
   \**********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -84,7 +140,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ }),
 
 /***/ "./styles/css/style.css":
-/*!******************************!*
+/*!******************************!*\
   !*** ./styles/css/style.css ***!
   \******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -95,7 +151,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ }),
 
 /***/ "./styles/sass/style.scss":
-/*!********************************!*
+/*!********************************!*\
   !*** ./styles/sass/style.scss ***!
   \********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -106,7 +162,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ }),
 
 /***/ "../node_modules/moment/locale sync recursive ^\\.\\/.*$":
-/*!****************************************************!*
+/*!****************************************************!*\
   !*** ../node_modules/moment/locale/ sync ^\.\/.*$ ***!
   \****************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
@@ -146,6 +202,9 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
+/******/ 	// the startup function
+/******/ 	// It's empty as some runtime module handles the default behavior
+/******/ 	__webpack_require__.x = function() {}
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	!function() {
@@ -169,6 +228,18 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 				}
 /******/ 			}
 /******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	!function() {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
@@ -196,6 +267,26 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 		};
 /******/ 	}();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	!function() {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	!function() {
 /******/ 		// no baseURI
@@ -221,43 +312,10 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 		
 /******/ 		// no HMR manifest
 /******/ 		
-/******/ 		var checkDeferredModules = function() {
-/******/ 		
-/******/ 		};
-/******/ 		function checkDeferredModulesImpl() {
-/******/ 			var result;
-/******/ 			for(var i = 0; i < deferredModules.length; i++) {
-/******/ 				var deferredModule = deferredModules[i];
-/******/ 				var fulfilled = true;
-/******/ 				for(var j = 1; j < deferredModule.length; j++) {
-/******/ 					var depId = deferredModule[j];
-/******/ 					if(installedChunks[depId] !== 0) fulfilled = false;
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferredModules.splice(i--, 1);
-/******/ 					result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
-/******/ 				}
-/******/ 			}
-/******/ 			if(deferredModules.length === 0) {
-/******/ 				__webpack_require__.x();
-/******/ 				__webpack_require__.x = function() {
-/******/ 		
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		}
-/******/ 		__webpack_require__.x = function() {
-/******/ 			// reset startup function so it can be called again when more startup code is added
-/******/ 			__webpack_require__.x = function() {
-/******/ 		
-/******/ 			}
-/******/ 			chunkLoadingGlobal = chunkLoadingGlobal.slice();
-/******/ 			for(var i = 0; i < chunkLoadingGlobal.length; i++) webpackJsonpCallback(chunkLoadingGlobal[i]);
-/******/ 			return (checkDeferredModules = checkDeferredModulesImpl)();
-/******/ 		};
+/******/ 		var checkDeferredModules = function() {};
 /******/ 		
 /******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = function(data) {
+/******/ 		var webpackJsonpCallback = function(parentChunkLoadingFunction, data) {
 /******/ 			var chunkIds = data[0];
 /******/ 			var moreModules = data[1];
 /******/ 			var runtime = data[2];
@@ -278,7 +336,7 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 				}
 /******/ 			}
 /******/ 			if(runtime) runtime(__webpack_require__);
-/******/ 			parentChunkLoadingFunction(data);
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
 /******/ 			while(resolves.length) {
 /******/ 				resolves.shift()();
 /******/ 			}
@@ -291,8 +349,35 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 		}
 /******/ 		
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
-/******/ 		var parentChunkLoadingFunction = chunkLoadingGlobal.push.bind(chunkLoadingGlobal);
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback;
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 		
+/******/ 		function checkDeferredModulesImpl() {
+/******/ 			var result;
+/******/ 			for(var i = 0; i < deferredModules.length; i++) {
+/******/ 				var deferredModule = deferredModules[i];
+/******/ 				var fulfilled = true;
+/******/ 				for(var j = 1; j < deferredModule.length; j++) {
+/******/ 					var depId = deferredModule[j];
+/******/ 					if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferredModules.splice(i--, 1);
+/******/ 					result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 				}
+/******/ 			}
+/******/ 			if(deferredModules.length === 0) {
+/******/ 				__webpack_require__.x();
+/******/ 				__webpack_require__.x = function() {};
+/******/ 			}
+/******/ 			return result;
+/******/ 		}
+/******/ 		var startup = __webpack_require__.x;
+/******/ 		__webpack_require__.x = function() {
+/******/ 			// reset startup function so it can be called again when more startup code is added
+/******/ 			__webpack_require__.x = startup || (function() {});
+/******/ 			return (checkDeferredModules = checkDeferredModulesImpl)();
+/******/ 		};
 /******/ 	}();
 /******/ 	
 /************************************************************************/
