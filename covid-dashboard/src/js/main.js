@@ -6,3 +6,4 @@ import '../styles/css/fonts.css';
 import './map-script';
 import '../styles/css/map-style.css'
 import './widget.four';
+import './widget-table';

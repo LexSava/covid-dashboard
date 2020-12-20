@@ -111,6 +111,9 @@ h6 {
 .widget_1 {
   grid-column: 3;
   grid-row: 1 / span 2;
+
+  align-items: normal;
+  justify-content: normal;
 }
 .widget_2 {
   grid-column: 1;
@@ -131,6 +134,14 @@ h6 {
   width: 100%;
   background-color: #f5df4d;
   height: 10%;
+}
+
+//-------------------Widget-table--------------------------------
+
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 //---------------------------------------------------
