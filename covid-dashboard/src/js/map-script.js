@@ -61,14 +61,18 @@ create_element('div', ['legend-class', 'legend-id', , , '', document.querySelect
 create_element('div', ['close-legend-class', 'close-legend-id', , , `<img class = "close-image-legend-class" src=${cancel}>`, document.querySelector('.legend-class')]);
 create_element('div', ['legend-text-class', 'legend-text-id', , , '', document.querySelector('.legend-class')]);
 
-let legend_icon;
-if (check.cumulative) legend_icon = red_icon;
-else if (check.active) legend_icon = green_icon;
-create_element('p', ['p-class', 'p-legend-1-id', , , `<img src = ${legend_icon} style = 'width: 25px; height: 25px;'> > 10,000,000`, document.querySelector('.legend-text-class')]);
-create_element('p', ['p-class', 'p-legend-2-id', , , `<img src = ${legend_icon} style = 'width: 20px; height: 20px; margin-right: 2.5px;'> 1,000,000 - 10,000,000`, document.querySelector('.legend-text-class')]);
-create_element('p', ['p-class', 'p-legend-3-id', , , `<img src = ${legend_icon} style = 'width: 15px; height: 15px; margin-right: 5px;'> 100,000 - 1,000,000`, document.querySelector('.legend-text-class')]);
-create_element('p', ['p-class', 'p-legend-4-id', , , `<img src = ${legend_icon} style = 'width: 10px; height: 10px; margin-right: 7.5px;'> 10,000 - 100,000`, document.querySelector('.legend-text-class')]);
-create_element('p', ['p-class', 'p-legend-5-id', , , `<img src = ${legend_icon} style = 'width: 5px; height: 5px; margin-right: 10px;'> < 10,000`, document.querySelector('.legend-text-class')]);
+function create_legend () {
+  document.getElementById('legend-text-id').innerHTML = '';
+  let legend_icon;
+  if (check.cumulative) legend_icon = red_icon;
+  else if (check.active) legend_icon = green_icon;
+  create_element('p', ['p-class', 'p-legend-1-id', , , `<img src = ${legend_icon} style = 'width: 25px; height: 25px;'> > 10,000,000`, document.querySelector('.legend-text-class')]);
+  create_element('p', ['p-class', 'p-legend-2-id', , , `<img src = ${legend_icon} style = 'width: 20px; height: 20px; margin-right: 2.5px;'> 1,000,000 - 10,000,000`, document.querySelector('.legend-text-class')]);
+  create_element('p', ['p-class', 'p-legend-3-id', , , `<img src = ${legend_icon} style = 'width: 15px; height: 15px; margin-right: 5px;'> 100,000 - 1,000,000`, document.querySelector('.legend-text-class')]);
+  create_element('p', ['p-class', 'p-legend-4-id', , , `<img src = ${legend_icon} style = 'width: 10px; height: 10px; margin-right: 7.5px;'> 10,000 - 100,000`, document.querySelector('.legend-text-class')]);
+  create_element('p', ['p-class', 'p-legend-5-id', , , `<img src = ${legend_icon} style = 'width: 5px; height: 5px; margin-right: 10px;'> < 10,000`, document.querySelector('.legend-text-class')]);
+}
+create_legend();
 
 const osmap = L.map('map-id', { scrollWheelZoom: true, zoomControl: false }).setView([10, 0], 2);
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
@@ -162,6 +166,7 @@ document.getElementById('active-cases-id').addEventListener('click', () => {
   document.getElementById('cumulative-cases-id').className = 'button-class passive-class';
   document.getElementById('active-cases-id').className = 'button-class active-class';
   getCountries();
+  create_legend();
 });
 
 document.getElementById('cumulative-cases-id').addEventListener('click', () => {
@@ -170,6 +175,7 @@ document.getElementById('cumulative-cases-id').addEventListener('click', () => {
   document.getElementById('cumulative-cases-id').className = 'button-class active-class';
   document.getElementById('active-cases-id').className = 'button-class passive-class';
   getCountries();
+  create_legend();
 });
 
 getCountries();
