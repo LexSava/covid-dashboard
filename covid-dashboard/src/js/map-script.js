@@ -60,7 +60,15 @@ create_element('div', ['skins-button-class', 'skins-button-id', , , `<img class 
 create_element('div', ['legend-class', 'legend-id', , , '', document.querySelector('.map-class')]);
 create_element('div', ['close-legend-class', 'close-legend-id', , , `<img class = "close-image-legend-class" src=${cancel}>`, document.querySelector('.legend-class')]);
 create_element('div', ['legend-text-class', 'legend-text-id', , , '', document.querySelector('.legend-class')]);
-create_element('p', ['p-class', 'p-legend-id', , , `<img src =${red_icon}> > 1,000,000 - 5,000,000`, document.querySelector('.legend-text-class')]);
+
+let legend_icon;
+if (check.cumulative) legend_icon = red_icon;
+else if (check.active) legend_icon = green_icon;
+create_element('p', ['p-class', 'p-legend-1-id', , , `<img src = ${legend_icon} style = 'width: 25px; height: 25px;'> > 10,000,000`, document.querySelector('.legend-text-class')]);
+create_element('p', ['p-class', 'p-legend-2-id', , , `<img src = ${legend_icon} style = 'width: 20px; height: 20px; margin-right: 2.5px;'> 1,000,000 - 10,000,000`, document.querySelector('.legend-text-class')]);
+create_element('p', ['p-class', 'p-legend-3-id', , , `<img src = ${legend_icon} style = 'width: 15px; height: 15px; margin-right: 5px;'> 100,000 - 1,000,000`, document.querySelector('.legend-text-class')]);
+create_element('p', ['p-class', 'p-legend-4-id', , , `<img src = ${legend_icon} style = 'width: 10px; height: 10px; margin-right: 7.5px;'> 10,000 - 100,000`, document.querySelector('.legend-text-class')]);
+create_element('p', ['p-class', 'p-legend-5-id', , , `<img src = ${legend_icon} style = 'width: 5px; height: 5px; margin-right: 10px;'> < 10,000`, document.querySelector('.legend-text-class')]);
 
 const osmap = L.map('map-id', { scrollWheelZoom: true, zoomControl: false }).setView([10, 0], 2);
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
@@ -75,20 +83,20 @@ async function getCountries() {
   for (const key in content) {
     let x, y;
     if (content[key].cases > 10000000) {
-      x = 50;
-      y = 50;
+      x = 25;
+      y = 25;
     } else if (content[key].cases > 1000000 && content[key].cases < 9999999) {
-      x = 40;
-      y = 40;
-    } else if (content[key].cases > 100000 && content[key].cases < 999999) {
-      x = 30;
-      y = 30;
-    } else if (content[key].cases > 10000 && content[key].cases < 99999) {
       x = 20;
       y = 20;
-    } else {
+    } else if (content[key].cases > 100000 && content[key].cases < 999999) {
+      x = 15;
+      y = 15;
+    } else if (content[key].cases > 10000 && content[key].cases < 99999) {
       x = 10;
       y = 10;
+    } else {
+      x = 5;
+      y = 5;
     }
     let icon_fill, tooltip_content;
     if (check.cumulative) {      

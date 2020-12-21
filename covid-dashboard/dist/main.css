@@ -521,7 +521,7 @@ h6 {
     top: 60px;
     right: 10px;
     width: 200px;
-    height: 300px;
+    height: 200px;
     background: #333333;
     border: solid 1px #dc143c; 
     padding: 5px;
@@ -541,8 +541,31 @@ h6 {
 }
 .legend-text-class {
     width: 196px;
-    height: 260px;
+    height: 160px;
     background: #222222;
     color: #bdbdbd;  
-    padding: 5px;  
+    padding: 5px;      
+}
+#p-legend-1-id {
+    line-height: 25px;
+}
+#p-legend-2-id {
+    line-height: 20px;
+    padding-top: 10px;    
+    padding-left: 2.5px;
+}
+#p-legend-3-id {
+    line-height: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+#p-legend-4-id {
+    line-height: 10px;
+    padding-top: 20px;
+    padding-left: 7.5px;
+}
+#p-legend-5-id {
+    line-height: 5px;
+    padding-top: 25px;
+    padding-left: 10px;
 }
