@@ -1,5 +1,8 @@
 const WIDGET_TWO = document.querySelector('.widget_2')
 const COUNTRY_BLOCK = document.querySelector('.widget__two__block__countries')
+const CASES_DATA = document.querySelector('.cases')
+const DEATHS_DATA = document.querySelector('.deaths')
+const RECOVERED_DATA = document.querySelector('.recovered')
 
 
 function CreatesListCountries(flag, country, indicator) {
@@ -26,20 +29,64 @@ function CreatesListCountries(flag, country, indicator) {
 }
 
 
+// const getRegetResultsOnCovid = async () => {
+//     const response = await fetch('https://disease.sh/v2/countries');
+//     const results = await response.json();
+//     return results;
+// }
 
-async function GetCountryData() {
+// console.log(getRegetResultsOnCovid());
+
+
+let results;
+
+async function GetCountryData(val) {
     const response = await fetch('https://disease.sh/v2/countries');
-    const results = await response.json();
-    results.sort(function (a, b) {
-        return b.cases - a.cases;
-    })
-    console.log(results);
-
-
-    for (const key in results) {
-        CreatesListCountries(results[key].countryInfo.flag, results[key].country, results[key].cases)
-        console.log(typeof results[key].cases);
+    results = await response.json();
+    if (val === 2) {
+        sortingByDeaths();
+    } else if (val === 3) {
+        sortingByRecovered();
+    } else {
+        sortingByCases();
     }
 }
 
-GetCountryData()
+function sortingByCases() {
+    while (COUNTRY_BLOCK.firstChild) {
+        COUNTRY_BLOCK.removeChild(COUNTRY_BLOCK.firstChild);
+    }
+    results.sort((a, b) => { return b.cases - a.cases; })
+
+    for (let key in results) {
+        CreatesListCountries(results[key].countryInfo.flag, results[key].country, results[key].cases)
+    }
+}
+
+function sortingByDeaths() {
+    while (COUNTRY_BLOCK.firstChild) {
+        COUNTRY_BLOCK.removeChild(COUNTRY_BLOCK.firstChild);
+    }
+    results.sort((a, b) => { return b.deaths - a.deaths; })
+
+    for (let key in results) {
+        CreatesListCountries(results[key].countryInfo.flag, results[key].country, results[key].deaths)
+    }
+}
+
+function sortingByRecovered() {
+    while (COUNTRY_BLOCK.firstChild) {
+        COUNTRY_BLOCK.removeChild(COUNTRY_BLOCK.firstChild);
+    }
+    results.sort((a, b) => { return b.recovered - a.recovered; })
+
+    for (let key in results) {
+        CreatesListCountries(results[key].countryInfo.flag, results[key].country, results[key].recovered)
+    }
+}
+
+CASES_DATA.addEventListener("click", () => GetCountryData(1));
+DEATHS_DATA.addEventListener("click", () => GetCountryData(2));
+RECOVERED_DATA.addEventListener("click", () => GetCountryData(3));
+
+GetCountryData(1);

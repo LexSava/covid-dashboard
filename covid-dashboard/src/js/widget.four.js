@@ -87,7 +87,6 @@ async function BuildGraphByCountry(countryNeme) {
   const response = await fetch('https://disease.sh/v2/countries');
   const results = await response.json();
   const newArrDate = [];
-  console.log(results[1]);
   for (const key in results) {
     if (results[key].country === countryNeme) {
       newArrDate.push(results[key].cases);
