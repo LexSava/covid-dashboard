@@ -61,14 +61,28 @@ create_element('div', ['legend-class', 'legend-id', , , '', document.querySelect
 create_element('div', ['close-legend-class', 'close-legend-id', , , `<img class = "close-image-legend-class" src=${cancel}>`, document.querySelector('.legend-class')]);
 create_element('div', ['legend-text-class', 'legend-text-id', , , '', document.querySelector('.legend-class')]);
 
-let legend_icon;
-if (check.cumulative) legend_icon = red_icon;
-else if (check.active) legend_icon = green_icon;
-create_element('p', ['p-class', 'p-legend-1-id', , , `<img src = ${legend_icon} style = 'width: 25px; height: 25px;'> > 10,000,000`, document.querySelector('.legend-text-class')]);
-create_element('p', ['p-class', 'p-legend-2-id', , , `<img src = ${legend_icon} style = 'width: 20px; height: 20px; margin-right: 2.5px;'> 1,000,000 - 10,000,000`, document.querySelector('.legend-text-class')]);
-create_element('p', ['p-class', 'p-legend-3-id', , , `<img src = ${legend_icon} style = 'width: 15px; height: 15px; margin-right: 5px;'> 100,000 - 1,000,000`, document.querySelector('.legend-text-class')]);
-create_element('p', ['p-class', 'p-legend-4-id', , , `<img src = ${legend_icon} style = 'width: 10px; height: 10px; margin-right: 7.5px;'> 10,000 - 100,000`, document.querySelector('.legend-text-class')]);
-create_element('p', ['p-class', 'p-legend-5-id', , , `<img src = ${legend_icon} style = 'width: 5px; height: 5px; margin-right: 10px;'> < 10,000`, document.querySelector('.legend-text-class')]);
+create_element('div', ['region-class', 'region-id', , , '', document.querySelector('.map-class')]);
+create_element('div', ['close-region-class', 'close-region-id', , , `<img class = "close-image-region-class" src=${cancel}>`, document.querySelector('.region-class')]);
+create_element('div', ['region-text-class', 'region-text-id', , , '', document.querySelector('.region-class')]);
+
+function create_legend () {
+  document.getElementById('legend-text-id').innerHTML = '';
+  let legend_icon;
+  if (check.cumulative) legend_icon = red_icon;
+  else if (check.active) legend_icon = green_icon;
+  create_element('p', ['p-class', 'p-legend-1-id', , , `<img src = ${legend_icon} style = 'width: 25px; height: 25px;'> > 10,000,000`, document.querySelector('.legend-text-class')]);
+  create_element('p', ['p-class', 'p-legend-2-id', , , `<img src = ${legend_icon} style = 'width: 20px; height: 20px; margin-right: 2.5px;'> 1,000,000 - 10,000,000`, document.querySelector('.legend-text-class')]);
+  create_element('p', ['p-class', 'p-legend-3-id', , , `<img src = ${legend_icon} style = 'width: 15px; height: 15px; margin-right: 5px;'> 100,000 - 1,000,000`, document.querySelector('.legend-text-class')]);
+  create_element('p', ['p-class', 'p-legend-4-id', , , `<img src = ${legend_icon} style = 'width: 10px; height: 10px; margin-right: 7.5px;'> 10,000 - 100,000`, document.querySelector('.legend-text-class')]);
+  create_element('p', ['p-class', 'p-legend-5-id', , , `<img src = ${legend_icon} style = 'width: 5px; height: 5px; margin-right: 10px;'> < 10,000`, document.querySelector('.legend-text-class')]);
+}
+create_legend();
+
+create_element('p', ['p-class p-region-class', 'p-region-1-id', , , 'Default world map', document.querySelector('.region-text-class')]);
+create_element('p', ['p-class p-region-class', 'p-region-2-id', , , 'China', document.querySelector('.region-text-class')]);
+create_element('p', ['p-class p-region-class', 'p-region-3-id', , , 'Australia', document.querySelector('.region-text-class')]);
+create_element('p', ['p-class p-region-class', 'p-region-4-id', , , 'North America', document.querySelector('.region-text-class')]);
+create_element('p', ['p-class p-region-class', 'p-region-5-id', , , 'Europe', document.querySelector('.region-text-class')]);
 
 const osmap = L.map('map-id', { scrollWheelZoom: true, zoomControl: false }).setView([10, 0], 2);
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
@@ -162,6 +176,7 @@ document.getElementById('active-cases-id').addEventListener('click', () => {
   document.getElementById('cumulative-cases-id').className = 'button-class passive-class';
   document.getElementById('active-cases-id').className = 'button-class active-class';
   getCountries();
+  create_legend();
 });
 
 document.getElementById('cumulative-cases-id').addEventListener('click', () => {
@@ -170,13 +185,39 @@ document.getElementById('cumulative-cases-id').addEventListener('click', () => {
   document.getElementById('cumulative-cases-id').className = 'button-class active-class';
   document.getElementById('active-cases-id').className = 'button-class passive-class';
   getCountries();
+  create_legend();
 });
 
 getCountries();
 
 document.getElementById('legend-button-id').addEventListener('click', () => {
   document.getElementById('legend-id').style.display = 'flex';
+  document.getElementById('region-id').style.display = 'none';
 });
 document.querySelector('.close-image-legend-class').addEventListener('click', () => {
   document.getElementById('legend-id').style.display = 'none';
+});
+
+document.getElementById('zoom-reg-button-id').addEventListener('click', () => {
+  document.getElementById('region-id').style.display = 'flex';
+  document.getElementById('legend-id').style.display = 'none';
+});
+document.querySelector('.close-image-region-class').addEventListener('click', () => {
+  document.getElementById('region-id').style.display = 'none';
+});
+
+document.getElementById('p-region-1-id').addEventListener('click', () => {
+  osmap.setView([10, 0], 2);
+});
+document.getElementById('p-region-2-id').addEventListener('click', () => {
+  osmap.setView([30, 100], 3);
+});
+document.getElementById('p-region-3-id').addEventListener('click', () => {
+  osmap.setView([-18, 135], 3);
+});
+document.getElementById('p-region-4-id').addEventListener('click', () => {
+  osmap.setView([50, -97], 3);
+});
+document.getElementById('p-region-5-id').addEventListener('click', () => {
+  osmap.setView([55, 10], 4);
 });

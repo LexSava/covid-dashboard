@@ -208,3 +208,38 @@
     padding-top: 25px;
     padding-left: 10px;
 }
+#region-id {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    height: 175px;
+    background: #333333;
+    border: solid 1px #dc143c; 
+    padding: 5px;
+    z-index: 3000;    
+    border-radius: 5px;
+    align-items: flex-end;
+}
+.close-region-class {
+    position: absolute;
+    top: 7px;
+    right: 7px;    
+}
+.close-image-region-class {
+    width: 20px;
+    height: 20px;   
+    cursor: pointer;
+}
+.region-text-class {
+    width: 196px;
+    height: 135px;
+    background: #222222;
+    color: #bdbdbd;  
+    padding: 5px;      
+}
+.p-region-class {
+    line-height: 25px;
+    cursor: pointer;
+}
