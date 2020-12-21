@@ -407,13 +407,13 @@ h6 {
     justify-content: center;
     align-items: center;       
     position: absolute;
-    top: 16px;
-    left: 376px;
+    top: 20px;
+    left: 379px;
     z-index: 6000; 
 }
 .close-image-class {    
-    width: 30px;
-    height: 30px;    
+    width: 20px;
+    height: 20px;    
 }
 .close-image-class:hover {
     cursor: pointer;
@@ -423,13 +423,13 @@ h6 {
     justify-content: center;
     align-items: center;       
     position: absolute;
-    top: 134px;
+    top: 135px;
     left: 20px;
     z-index: 6000;
 }
 .center-image-class {    
-    width: 25px;
-    height: 25px;    
+    width: 20px;
+    height: 20px;    
 }
 .center-image-class:hover {
     cursor: pointer;    
@@ -439,13 +439,13 @@ h6 {
     justify-content: center;
     align-items: center;       
     position: absolute;
-    top: 134px;
+    top: 135px;
     left: 60px;    
     z-index: 6000;    
 }
 .zoomin-image-class {    
-    width: 25px;
-    height: 25px;    
+    width: 20px;
+    height: 20px;    
 }
 .zoomin-image-class:hover {
     cursor: pointer;    
@@ -515,4 +515,34 @@ h6 {
     height: 20px;   
     cursor: pointer;
 }
-
+#legend-id {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    height: 300px;
+    background: #333333;
+    border: solid 1px #dc143c; 
+    padding: 5px;
+    z-index: 3000;    
+    border-radius: 5px;
+    align-items: flex-end;
+}
+.close-legend-class {
+    position: absolute;
+    top: 7px;
+    right: 7px;    
+}
+.close-image-legend-class {
+    width: 20px;
+    height: 20px;   
+    cursor: pointer;
+}
+.legend-text-class {
+    width: 196px;
+    height: 260px;
+    background: #222222;
+    color: #bdbdbd;  
+    padding: 5px;  
+}

@@ -53,9 +53,14 @@ create_element('div', ['button-class passive-class', 'active-cases-id', , , '', 
 create_element('div', ['button-text-class', 'active-cases-text-id', , , 'Active Cases', document.getElementById('active-cases-id')]);
 
 create_element('div', ['options-class', 'options-id', , , '', document.querySelector('.map-class')]);
-create_element('div', ['zoom-reg-class', 'zoom-reg-id', , , `<img class = "zoom-reg-image-class" src=${zoom_reg}>`, document.querySelector('.options-class')]);
-create_element('div', ['legend-class', 'legend-id', , , `<img class = "legend-image-class" src=${legend}>`, document.querySelector('.options-class')]);
-create_element('div', ['skins-class', 'skins-id', , , `<img class = "skins-image-class" src=${skins}>`, document.querySelector('.options-class')]);
+create_element('div', ['zoom-reg-button-class', 'zoom-reg-button-id', , , `<img class = "zoom-reg-image-class" src=${zoom_reg}>`, document.querySelector('.options-class')]);
+create_element('div', ['legend-button-class', 'legend-button-id', , , `<img class = "legend-image-class" src=${legend}>`, document.querySelector('.options-class')]);
+create_element('div', ['skins-button-class', 'skins-button-id', , , `<img class = "skins-image-class" src=${skins}>`, document.querySelector('.options-class')]);
+
+create_element('div', ['legend-class', 'legend-id', , , '', document.querySelector('.map-class')]);
+create_element('div', ['close-legend-class', 'close-legend-id', , , `<img class = "close-image-legend-class" src=${cancel}>`, document.querySelector('.legend-class')]);
+create_element('div', ['legend-text-class', 'legend-text-id', , , '', document.querySelector('.legend-class')]);
+create_element('p', ['p-class', 'p-legend-id', , , `<img src =${red_icon}> > 1,000,000 - 5,000,000`, document.querySelector('.legend-text-class')]);
 
 const osmap = L.map('map-id', { scrollWheelZoom: true, zoomControl: false }).setView([10, 0], 2);
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
@@ -160,3 +165,10 @@ document.getElementById('cumulative-cases-id').addEventListener('click', () => {
 });
 
 getCountries();
+
+document.getElementById('legend-button-id').addEventListener('click', () => {
+  document.getElementById('legend-id').style.display = 'flex';
+});
+document.querySelector('.close-image-legend-class').addEventListener('click', () => {
+  document.getElementById('legend-id').style.display = 'none';
+});
