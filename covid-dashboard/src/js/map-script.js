@@ -3,6 +3,9 @@ import green_icon from '../assets/icon/icons8-filled-green-circle-60.png';
 import cancel from '../assets/icon/icons8-cancel-50.png';
 import center from '../assets/icon/icons8-center-of-gravity-50.png';
 import zoomin from '../assets/icon/icons8-zoom-in-50.png';
+import zoom_reg from '../assets/icon/icons8-bookmark-100.png';
+import legend from '../assets/icon/icons8-list-52.png';
+import skins from '../assets/icon/icons8-categorize-50.png';
 
 function create_element(type, options) {
   const elem = document.createElement(type);
@@ -49,12 +52,17 @@ create_element('div', ['button-text-class', 'cumulative-cases-text-id', , , 'Cum
 create_element('div', ['button-class passive-class', 'active-cases-id', , , '', document.querySelector('.map-class')]);
 create_element('div', ['button-text-class', 'active-cases-text-id', , , 'Active Cases', document.getElementById('active-cases-id')]);
 
+create_element('div', ['options-class', 'options-id', , , '', document.querySelector('.map-class')]);
+create_element('div', ['zoom-reg-class', 'zoom-reg-id', , , `<img class = "zoom-reg-image-class" src=${zoom_reg}>`, document.querySelector('.options-class')]);
+create_element('div', ['legend-class', 'legend-id', , , `<img class = "legend-image-class" src=${legend}>`, document.querySelector('.options-class')]);
+create_element('div', ['skins-class', 'skins-id', , , `<img class = "skins-image-class" src=${skins}>`, document.querySelector('.options-class')]);
+
 const osmap = L.map('map-id', { scrollWheelZoom: true, zoomControl: false }).setView([10, 0], 2);
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 }).addTo(osmap);
 
-new L.Control.Zoom({ position: 'topright' }).addTo(osmap);
+new L.Control.Zoom({ position: 'bottomright' }).addTo(osmap);
 
 async function getCountries() {
   const response = await fetch('https://disease.sh/v2/countries');

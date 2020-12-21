@@ -133,3 +133,24 @@
     font-weight: 100;
     color: #e0bf26;
 }
+.options-class {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;   
+    position: absolute;
+    width: 100px;
+    height: 40px;          
+    z-index: 3000;    
+    border-radius: 5px;
+    top: 10px;
+    right: 10px;
+    background: #333333;
+    border: solid 1px #dc143c; 
+    padding: 9px;
+}
+.zoom-reg-image-class, .legend-image-class, .skins-image-class {
+    width: 20px;
+    height: 20px;   
+    cursor: pointer;
+}
