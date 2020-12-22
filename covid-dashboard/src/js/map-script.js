@@ -16,10 +16,10 @@ function create_element(type, options) {
   options[5].append(elem);
   return elem;
 }
-let check = {
+const check = {
   cumulative: true,
-  active: false
-}
+  active: false,
+};
 
 document.querySelector('.widget_3').innerHTML = '';
 create_element('div', ['wrapper-map-class', 'wrapper-map-id', , , '', document.querySelector('.widget_3')]);
@@ -86,7 +86,7 @@ create_element('p', ['p-class p-region-class', 'p-region-5-id', , , 'Europe', do
 
 const osmap = L.map('map-id', { scrollWheelZoom: true, zoomControl: false }).setView([10, 0], 2);
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
 }).addTo(osmap);
 
 new L.Control.Zoom({ position: 'bottomright' }).addTo(osmap);
@@ -95,7 +95,8 @@ async function getCountries() {
   const response = await fetch('https://disease.sh/v2/countries');
   const content = await response.json();
   for (const key in content) {
-    let x, y;
+    let x; let
+      y;
     if (content[key].cases > 10000000) {
       x = 25;
       y = 25;
@@ -112,7 +113,8 @@ async function getCountries() {
       x = 5;
       y = 5;
     }
-    let icon_fill, tooltip_content;
+    let icon_fill; let
+      tooltip_content;
     if (check.cumulative) {
       icon_fill = red_icon;
       tooltip_content = `Country: ${content[key].country} <br> 
@@ -137,7 +139,7 @@ async function getCountries() {
     }
     const myIcon = L.icon({
       iconUrl: icon_fill,
-      iconSize: [x, y]
+      iconSize: [x, y],
     });
     const tooltip = L.tooltip({ direction: 'top' }).setContent(tooltip_content);
     const mark = L.marker([content[key].countryInfo.lat, content[key].countryInfo.long], { icon: myIcon }).addTo(osmap)
@@ -152,7 +154,7 @@ async function getCountries() {
       document.getElementById('span-value-deaths-id').innerHTML = content[key].deaths.toLocaleString();
       document.getElementById('span-value-recovered-id').innerHTML = content[key].recovered.toLocaleString();
       document.getElementById('span-value-active-id').innerHTML = content[key].active.toLocaleString();
-      const lat = content[key].countryInfo.lat;
+      const { lat } = content[key].countryInfo;
       const lon = content[key].countryInfo.long;
       document.getElementById('center-id').addEventListener('click', () => {
         osmap.setView([lat, lon]);
