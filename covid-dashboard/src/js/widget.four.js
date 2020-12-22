@@ -1,5 +1,4 @@
 import Chart from 'chart.js';
-import search from './widget.two';
 
 const BTN_EXPAND_BLOCK = document.querySelector('.widget_4__btn');
 const BLOCK_WIDGET_4 = document.querySelector('.widget_4');

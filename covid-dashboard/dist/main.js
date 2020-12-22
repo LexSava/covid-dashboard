@@ -10,7 +10,7 @@
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./js/babel.js":
-/*!*********************!*\
+/*!*********************!*
   !*** ./js/babel.js ***!
   \*********************/
 /***/ (function() {
@@ -20,18 +20,18 @@ eval("\n\n//# sourceURL=webpack:///./js/babel.js?");
 /***/ }),
 
 /***/ "./js/main.js":
-/*!********************!*\
+/*!********************!*
   !*** ./js/main.js ***!
   \********************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./babel */ \"./js/babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./widget.zero */ \"./js/widget.zero.js\");\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_widget_zero__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/css/style.css */ \"./styles/css/style.css\");\n/* harmony import */ var _styles_sass_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/sass/style.scss */ \"./styles/sass/style.scss\");\n/* harmony import */ var _styles_css_fonts_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/css/fonts.css */ \"./styles/css/fonts.css\");\n/* harmony import */ var _map_script__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./map-script */ \"./js/map-script.js\");\n/* harmony import */ var _styles_css_map_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/css/map-style.css */ \"./styles/css/map-style.css\");\n/* harmony import */ var _widget_four__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widget.four */ \"./js/widget.four.js\");\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./babel */ \"./js/babel.js\");\n/* harmony import */ var _babel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./widget.zero */ \"./js/widget.zero.js\");\n/* harmony import */ var _widget_zero__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_widget_zero__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/css/style.css */ \"./styles/css/style.css\");\n/* harmony import */ var _styles_sass_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/sass/style.scss */ \"./styles/sass/style.scss\");\n/* harmony import */ var _styles_css_fonts_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/css/fonts.css */ \"./styles/css/fonts.css\");\n/* harmony import */ var _map_script__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./map-script */ \"./js/map-script.js\");\n/* harmony import */ var _styles_css_map_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/css/map-style.css */ \"./styles/css/map-style.css\");\n/* harmony import */ var _widget_four__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widget.four */ \"./js/widget.four.js\");\n/* harmony import */ var _widget_two__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widget.two */ \"./js/widget.two.js\");\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./js/main.js?");
 
 /***/ }),
 
 /***/ "./js/map-script.js":
-/*!**************************!*\
+/*!**************************!*
   !*** ./js/map-script.js ***!
   \**************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -42,18 +42,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ass
 /***/ }),
 
 /***/ "./js/widget.four.js":
-/*!***************************!*\
+/*!***************************!*
   !*** ./js/widget.four.js ***!
   \***************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js */ \"../node_modules/chart.js/dist/Chart.js\");\n/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_0__);\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n\nvar BTN_EXPAND_BLOCK = document.querySelector('.widget_4__btn');\nvar BLOCK_WIDGET_4 = document.querySelector('.widget_4');\nvar SELECT_COUNTRYS = document.querySelector('.dropdown-select');\nvar D = new Date('01/20/20');\nvar Till = new Date();\nvar ARRAY_OF_DATES = [];\nvar ctx = document.getElementById('myChart').getContext('2d');\n\nfunction pad(s) {\n  return \"00\".concat(s).slice(-2);\n}\n\nwhile (D.getTime() < Till.getTime()) {\n  ARRAY_OF_DATES.push(\"\".concat(D.getFullYear(), \"-\").concat(pad(D.getMonth() + 1), \"-\").concat(pad(D.getDate())));\n  D.setDate(D.getDate() + 1);\n}\n\nvar LineGraph;\nvar BarGraph;\n\nfunction BuildGraphWithData() {\n  return _BuildGraphWithData.apply(this, arguments);\n}\n\nfunction _BuildGraphWithData() {\n  _BuildGraphWithData = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    var response, results, arrCasesValue, arrDeathsValue, arrRecoveredValue;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=366');\n\n          case 2:\n            response = _context.sent;\n            _context.next = 5;\n            return response.json();\n\n          case 5:\n            results = _context.sent;\n            arrCasesValue = Object.values(results.cases);\n            arrDeathsValue = Object.values(results.deaths);\n            arrRecoveredValue = Object.values(results.recovered);\n            LineGraph = new (chart_js__WEBPACK_IMPORTED_MODULE_0___default())(ctx, {\n              type: 'line',\n              data: {\n                labels: ARRAY_OF_DATES,\n                datasets: [{\n                  label: 'Cases',\n                  // Название\n                  backgroundColor: 'rgba(255, 206, 86, 0.2)',\n                  borderColor: 'rgba(255, 206, 86, 1)',\n                  pointBackgroundColor: 'rgba(255, 206, 86, 1)',\n                  pointBorderWidth: 1,\n                  pointRadius: 1,\n                  data: arrCasesValue\n                }, {\n                  label: 'Deaths',\n                  // Название\n                  backgroundColor: 'rgba(153, 102, 255, 0.2)',\n                  borderColor: 'rgba(153, 102, 255, 1)',\n                  pointBackgroundColor: 'rgba(153, 102, 255, 1)',\n                  pointBorderWidth: 1,\n                  pointRadius: 1,\n                  data: arrDeathsValue\n                }, {\n                  label: 'Recovered',\n                  // Название\n                  backgroundColor: 'rgba(54, 162, 235, 0.2)',\n                  borderColor: 'rgba(54, 162, 235, 1)',\n                  pointBackgroundColor: 'rgba(54, 162, 235, 1)',\n                  pointBorderWidth: 1,\n                  pointRadius: 1,\n                  data: arrRecoveredValue\n                }]\n              },\n              options: {\n                legend: {\n                  labels: {\n                    fontColor: 'white'\n                  }\n                },\n                scales: {\n                  xAxes: [{\n                    type: 'time',\n                    time: {\n                      displayFormats: {\n                        quarter: 'MMM YYYY'\n                      }\n                    }\n                  }],\n                  yAxes: [{\n                    ticks: {\n                      callback: function callback(value) {\n                        return \"\".concat(value / 1000000, \" M\");\n                      }\n                    }\n                  }]\n                }\n              }\n            });\n\n          case 10:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _BuildGraphWithData.apply(this, arguments);\n}\n\nfunction BuildGraphByCountry(_x) {\n  return _BuildGraphByCountry.apply(this, arguments);\n}\n\nfunction _BuildGraphByCountry() {\n  _BuildGraphByCountry = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(countryNeme) {\n    var response, results, newArrDate, key;\n    return regeneratorRuntime.wrap(function _callee2$(_context2) {\n      while (1) {\n        switch (_context2.prev = _context2.next) {\n          case 0:\n            _context2.next = 2;\n            return fetch('https://disease.sh/v2/countries');\n\n          case 2:\n            response = _context2.sent;\n            _context2.next = 5;\n            return response.json();\n\n          case 5:\n            results = _context2.sent;\n            newArrDate = [];\n            console.log(results[1]);\n\n            for (key in results) {\n              if (results[key].country === countryNeme) {\n                newArrDate.push(results[key].cases);\n                newArrDate.push(results[key].deaths);\n                newArrDate.push(results[key].recovered);\n              }\n            }\n\n            BarGraph = new (chart_js__WEBPACK_IMPORTED_MODULE_0___default())(ctx, {\n              type: 'bar',\n              data: {\n                labels: ['Cases', 'Deaths', 'Recovered'],\n                datasets: [{\n                  label: 'Contry',\n                  data: newArrDate,\n                  backgroundColor: ['rgba(255, 206, 86, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(54, 162, 235, 0.2)'],\n                  borderColor: ['rgba(255, 206, 86, 1)', 'rgba(153, 102, 255, 1)', 'rgba(54, 162, 235, 1)'],\n                  borderWidth: 1\n                }]\n              },\n              options: {\n                scales: {\n                  yAxes: [{\n                    ticks: {\n                      beginAtZero: true\n                    }\n                  }]\n                }\n              }\n            });\n\n          case 10:\n          case \"end\":\n            return _context2.stop();\n        }\n      }\n    }, _callee2);\n  }));\n  return _BuildGraphByCountry.apply(this, arguments);\n}\n\nBTN_EXPAND_BLOCK.addEventListener('click', function () {\n  BLOCK_WIDGET_4.classList.toggle('active');\n});\n\nfunction getNewOption(content) {\n  var NewOption = document.createElement('option');\n  NewOption.innerHTML = content;\n  NewOption.setAttribute('value', \"\".concat(content));\n  return NewOption;\n}\n\nfunction GetInformationThroughoutTheCountry() {\n  return _GetInformationThroughoutTheCountry.apply(this, arguments);\n}\n\nfunction _GetInformationThroughoutTheCountry() {\n  _GetInformationThroughoutTheCountry = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {\n    var response, results, key;\n    return regeneratorRuntime.wrap(function _callee3$(_context3) {\n      while (1) {\n        switch (_context3.prev = _context3.next) {\n          case 0:\n            _context3.next = 2;\n            return fetch('https://disease.sh/v2/countries');\n\n          case 2:\n            response = _context3.sent;\n            _context3.next = 5;\n            return response.json();\n\n          case 5:\n            results = _context3.sent;\n\n            for (key in results) {\n              SELECT_COUNTRYS.appendChild(getNewOption(\"\".concat(results[key].country)));\n            }\n\n          case 7:\n          case \"end\":\n            return _context3.stop();\n        }\n      }\n    }, _callee3);\n  }));\n  return _GetInformationThroughoutTheCountry.apply(this, arguments);\n}\n\nfunction test() {\n  console.log('HI');\n}\n\nGetInformationThroughoutTheCountry();\n\nSELECT_COUNTRYS.onchange = function () {\n  if (SELECT_COUNTRYS.value === 'All countries') {\n    BarGraph.destroy();\n    LineGraph.destroy();\n    BuildGraphWithData();\n  } else {\n    if (BarGraph !== undefined) {\n      BarGraph.destroy();\n    }\n\n    LineGraph.destroy();\n    BuildGraphByCountry(SELECT_COUNTRYS.value);\n  }\n};\n\nBuildGraphWithData();\n\n//# sourceURL=webpack:///./js/widget.four.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"BuildGraphByCountry\": function() { return /* binding */ BuildGraphByCountry; }\n/* harmony export */ });\n/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js */ \"../node_modules/chart.js/dist/Chart.js\");\n/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _widget_two__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./widget.two */ \"./js/widget.two.js\");\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n\n\nvar BTN_EXPAND_BLOCK = document.querySelector('.widget_4__btn');\nvar BLOCK_WIDGET_4 = document.querySelector('.widget_4');\nvar SELECT_COUNTRYS = document.querySelector('.dropdown-select');\nvar D = new Date('01/20/20');\nvar Till = new Date();\nvar ARRAY_OF_DATES = [];\nvar ctx = document.getElementById('myChart').getContext('2d');\n\nfunction pad(s) {\n  return \"00\".concat(s).slice(-2);\n}\n\nwhile (D.getTime() < Till.getTime()) {\n  ARRAY_OF_DATES.push(\"\".concat(D.getFullYear(), \"-\").concat(pad(D.getMonth() + 1), \"-\").concat(pad(D.getDate())));\n  D.setDate(D.getDate() + 1);\n}\n\nvar LineGraph;\nvar BarGraph;\n\nfunction BuildGraphWithData() {\n  return _BuildGraphWithData.apply(this, arguments);\n}\n\nfunction _BuildGraphWithData() {\n  _BuildGraphWithData = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    var response, results, arrCasesValue, arrDeathsValue, arrRecoveredValue;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=366');\n\n          case 2:\n            response = _context.sent;\n            _context.next = 5;\n            return response.json();\n\n          case 5:\n            results = _context.sent;\n            arrCasesValue = Object.values(results.cases);\n            arrDeathsValue = Object.values(results.deaths);\n            arrRecoveredValue = Object.values(results.recovered);\n            LineGraph = new (chart_js__WEBPACK_IMPORTED_MODULE_0___default())(ctx, {\n              type: 'line',\n              data: {\n                labels: ARRAY_OF_DATES,\n                datasets: [{\n                  label: 'Cases',\n                  // Название\n                  backgroundColor: 'rgba(255, 206, 86, 0.2)',\n                  borderColor: 'rgba(255, 206, 86, 1)',\n                  pointBackgroundColor: 'rgba(255, 206, 86, 1)',\n                  pointBorderWidth: 1,\n                  pointRadius: 1,\n                  data: arrCasesValue\n                }, {\n                  label: 'Deaths',\n                  // Название\n                  backgroundColor: 'rgba(153, 102, 255, 0.2)',\n                  borderColor: 'rgba(153, 102, 255, 1)',\n                  pointBackgroundColor: 'rgba(153, 102, 255, 1)',\n                  pointBorderWidth: 1,\n                  pointRadius: 1,\n                  data: arrDeathsValue\n                }, {\n                  label: 'Recovered',\n                  // Название\n                  backgroundColor: 'rgba(54, 162, 235, 0.2)',\n                  borderColor: 'rgba(54, 162, 235, 1)',\n                  pointBackgroundColor: 'rgba(54, 162, 235, 1)',\n                  pointBorderWidth: 1,\n                  pointRadius: 1,\n                  data: arrRecoveredValue\n                }]\n              },\n              options: {\n                legend: {\n                  labels: {\n                    fontColor: 'white'\n                  }\n                },\n                scales: {\n                  xAxes: [{\n                    type: 'time',\n                    time: {\n                      displayFormats: {\n                        quarter: 'MMM YYYY'\n                      }\n                    }\n                  }],\n                  yAxes: [{\n                    ticks: {\n                      callback: function callback(value) {\n                        return \"\".concat(value / 1000000, \" M\");\n                      }\n                    }\n                  }]\n                }\n              }\n            });\n\n          case 10:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _BuildGraphWithData.apply(this, arguments);\n}\n\nfunction BuildGraphByCountry(_x) {\n  return _BuildGraphByCountry.apply(this, arguments);\n}\n\nfunction _BuildGraphByCountry() {\n  _BuildGraphByCountry = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(countryNeme) {\n    var response, results, newArrDate, key;\n    return regeneratorRuntime.wrap(function _callee2$(_context2) {\n      while (1) {\n        switch (_context2.prev = _context2.next) {\n          case 0:\n            _context2.next = 2;\n            return fetch('https://disease.sh/v2/countries');\n\n          case 2:\n            response = _context2.sent;\n            _context2.next = 5;\n            return response.json();\n\n          case 5:\n            results = _context2.sent;\n            newArrDate = [];\n\n            for (key in results) {\n              if (results[key].country === countryNeme) {\n                newArrDate.push(results[key].cases);\n                newArrDate.push(results[key].deaths);\n                newArrDate.push(results[key].recovered);\n              }\n            }\n\n            BarGraph = new (chart_js__WEBPACK_IMPORTED_MODULE_0___default())(ctx, {\n              type: 'bar',\n              data: {\n                labels: ['Cases', 'Deaths', 'Recovered'],\n                datasets: [{\n                  label: 'Contry',\n                  data: newArrDate,\n                  backgroundColor: ['rgba(255, 206, 86, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(54, 162, 235, 0.2)'],\n                  borderColor: ['rgba(255, 206, 86, 1)', 'rgba(153, 102, 255, 1)', 'rgba(54, 162, 235, 1)'],\n                  borderWidth: 1\n                }]\n              },\n              options: {\n                scales: {\n                  yAxes: [{\n                    ticks: {\n                      beginAtZero: true\n                    }\n                  }]\n                }\n              }\n            });\n\n          case 9:\n          case \"end\":\n            return _context2.stop();\n        }\n      }\n    }, _callee2);\n  }));\n  return _BuildGraphByCountry.apply(this, arguments);\n}\n\nBTN_EXPAND_BLOCK.addEventListener('click', function () {\n  BLOCK_WIDGET_4.classList.toggle('active');\n});\n\nfunction getNewOption(content) {\n  var NewOption = document.createElement('option');\n  NewOption.innerHTML = content;\n  NewOption.setAttribute('value', \"\".concat(content));\n  return NewOption;\n}\n\nfunction GetInformationThroughoutTheCountry() {\n  return _GetInformationThroughoutTheCountry.apply(this, arguments);\n}\n\nfunction _GetInformationThroughoutTheCountry() {\n  _GetInformationThroughoutTheCountry = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {\n    var response, results, key;\n    return regeneratorRuntime.wrap(function _callee3$(_context3) {\n      while (1) {\n        switch (_context3.prev = _context3.next) {\n          case 0:\n            _context3.next = 2;\n            return fetch('https://disease.sh/v2/countries');\n\n          case 2:\n            response = _context3.sent;\n            _context3.next = 5;\n            return response.json();\n\n          case 5:\n            results = _context3.sent;\n\n            for (key in results) {\n              SELECT_COUNTRYS.appendChild(getNewOption(\"\".concat(results[key].country)));\n            }\n\n          case 7:\n          case \"end\":\n            return _context3.stop();\n        }\n      }\n    }, _callee3);\n  }));\n  return _GetInformationThroughoutTheCountry.apply(this, arguments);\n}\n\nfunction test() {\n  console.log('HI');\n}\n\nGetInformationThroughoutTheCountry();\n\nSELECT_COUNTRYS.onchange = function () {\n  if (SELECT_COUNTRYS.value === 'All countries') {\n    BarGraph.destroy();\n    LineGraph.destroy();\n    BuildGraphWithData();\n  } else {\n    if (BarGraph !== undefined) {\n      BarGraph.destroy();\n    }\n\n    LineGraph.destroy();\n    BuildGraphByCountry(SELECT_COUNTRYS.value);\n  }\n};\n\nBuildGraphWithData();\n\n//# sourceURL=webpack:///./js/widget.four.js?");
+
+/***/ }),
+
+/***/ "./js/widget.two.js":
+/*!**************************!*
+  !*** ./js/widget.two.js ***!
+  \**************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"search\": function() { return /* binding */ search; }\n/* harmony export */ });\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nvar WIDGET_TWO = document.querySelector('.widget_2');\nvar COUNTRY_BLOCK = document.querySelector('.widget__two__block__countries');\nvar CASES_DATA = document.querySelector('.cases');\nvar DEATHS_DATA = document.querySelector('.deaths');\nvar RECOVERED_DATA = document.querySelector('.recovered');\nvar PROPOSED_COUNTRIES = document.querySelector('#countrys');\nvar search = document.querySelector('#search');\nvar results;\nvar dataObtained;\n\nfunction CreatesListCountries(flag, country, indicator) {\n  var newСountryСontainer = document.createElement('div');\n  newСountryСontainer.classList.add('widget__two__countries');\n  COUNTRY_BLOCK.appendChild(newСountryСontainer);\n  var newFlagImage = document.createElement('img');\n  newFlagImage.classList.add('widget__two__flag');\n  newFlagImage.src = flag;\n  var newNameCountry = document.createElement('span');\n  newNameCountry.classList.add('widget__two__name__countries');\n  newNameCountry.innerHTML = country;\n  var newIndicatorCountry = document.createElement('span');\n  newIndicatorCountry.classList.add('widget__two__indicator__countries');\n  newIndicatorCountry.innerHTML = \" - \".concat(indicator);\n  newСountryСontainer.appendChild(newFlagImage);\n  newСountryСontainer.appendChild(newNameCountry);\n  newСountryСontainer.appendChild(newIndicatorCountry);\n}\n\nfunction GetCountryData(_x) {\n  return _GetCountryData.apply(this, arguments);\n}\n\nfunction _GetCountryData() {\n  _GetCountryData = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(val) {\n    var response;\n    return regeneratorRuntime.wrap(function _callee2$(_context2) {\n      while (1) {\n        switch (_context2.prev = _context2.next) {\n          case 0:\n            _context2.next = 2;\n            return fetch('https://disease.sh/v2/countries');\n\n          case 2:\n            response = _context2.sent;\n            _context2.next = 5;\n            return response.json();\n\n          case 5:\n            results = _context2.sent;\n\n            if (val === 2) {\n              sortingByDeaths();\n            } else if (val === 3) {\n              sortingByRecovered();\n            } else {\n              sortingByCases();\n            }\n\n          case 7:\n          case \"end\":\n            return _context2.stop();\n        }\n      }\n    }, _callee2);\n  }));\n  return _GetCountryData.apply(this, arguments);\n}\n\nfunction sortingByCases() {\n  while (COUNTRY_BLOCK.firstChild) {\n    COUNTRY_BLOCK.removeChild(COUNTRY_BLOCK.firstChild);\n  }\n\n  results.sort(function (a, b) {\n    return b.cases - a.cases;\n  });\n\n  for (var key in results) {\n    CreatesListCountries(results[key].countryInfo.flag, results[key].country, results[key].cases);\n  }\n}\n\nfunction sortingByDeaths() {\n  while (COUNTRY_BLOCK.firstChild) {\n    COUNTRY_BLOCK.removeChild(COUNTRY_BLOCK.firstChild);\n  }\n\n  results.sort(function (a, b) {\n    return b.deaths - a.deaths;\n  });\n\n  for (var key in results) {\n    CreatesListCountries(results[key].countryInfo.flag, results[key].country, results[key].deaths);\n  }\n}\n\nfunction sortingByRecovered() {\n  while (COUNTRY_BLOCK.firstChild) {\n    COUNTRY_BLOCK.removeChild(COUNTRY_BLOCK.firstChild);\n  }\n\n  results.sort(function (a, b) {\n    return b.recovered - a.recovered;\n  });\n\n  for (var key in results) {\n    CreatesListCountries(results[key].countryInfo.flag, results[key].country, results[key].recovered);\n  }\n}\n\nCASES_DATA.addEventListener(\"click\", function () {\n  return GetCountryData(1);\n});\nDEATHS_DATA.addEventListener(\"click\", function () {\n  return GetCountryData(2);\n});\nRECOVERED_DATA.addEventListener(\"click\", function () {\n  return GetCountryData(3);\n});\nGetCountryData(1);\n\nvar searchStates = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(searchText) {\n    var response, matches;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch('https://disease.sh/v2/countries');\n\n          case 2:\n            response = _context.sent;\n            _context.next = 5;\n            return response.json();\n\n          case 5:\n            dataObtained = _context.sent;\n            matches = dataObtained.filter(function (state) {\n              var regex = new RegExp(\"^\".concat(searchText), 'gi');\n              return state.country.match(regex);\n            });\n\n            if (searchText.length === 0) {\n              GetCountryData(1);\n              matches = [];\n            }\n\n            outputHtml(matches);\n\n          case 9:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function searchStates(_x2) {\n    return _ref.apply(this, arguments);\n  };\n}();\n\nvar outputHtml = function outputHtml(matches) {\n  while (COUNTRY_BLOCK.firstChild) {\n    COUNTRY_BLOCK.removeChild(COUNTRY_BLOCK.firstChild);\n  }\n\n  while (PROPOSED_COUNTRIES.firstChild) {\n    PROPOSED_COUNTRIES.removeChild(PROPOSED_COUNTRIES.firstChild);\n  }\n\n  if (matches.length > 0) {\n    matches.map(function (match) {\n      var newСountryСontainer = document.createElement('div');\n      newСountryСontainer.classList.add('widget__two__countries');\n      COUNTRY_BLOCK.appendChild(newСountryСontainer);\n      var newOption = document.createElement('option');\n      newOption.innerHTML = \"\".concat(match.country);\n      var newFlagImage = document.createElement('img');\n      newFlagImage.classList.add('widget__two__flag');\n      newFlagImage.src = \"\".concat(match.countryInfo.flag);\n      var newNameCountry = document.createElement('span');\n      newNameCountry.classList.add('widget__two__name__countries');\n      newNameCountry.innerHTML = \"\".concat(match.country);\n      var newIndicatorCountry = document.createElement('span');\n      newIndicatorCountry.classList.add('widget__two__indicator__countries');\n      newIndicatorCountry.innerHTML = \" cases - \".concat(match.cases, \", deaths - \").concat(match.deaths, \", recovered - \").concat(match.recovered);\n      PROPOSED_COUNTRIES.appendChild(newOption);\n      newСountryСontainer.appendChild(newFlagImage);\n      newСountryСontainer.appendChild(newNameCountry);\n      newСountryСontainer.appendChild(newIndicatorCountry);\n    });\n  }\n};\n\nsearch.addEventListener('input', function () {\n  searchStates(search.value);\n});\nconsole.log(_typeof(search));\n\n//# sourceURL=webpack:///./js/widget.two.js?");
 
 /***/ }),
 
 /***/ "./js/widget.zero.js":
-/*!***************************!*\
+/*!***************************!*
   !*** ./js/widget.zero.js ***!
   \***************************/
 /***/ (function() {
@@ -63,7 +74,7 @@ eval("function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg)
 /***/ }),
 
 /***/ "./assets/icon/icons8-bookmark-100.png":
-/*!*********************************************!*\
+/*!*********************************************!*
   !*** ./assets/icon/icons8-bookmark-100.png ***!
   \*********************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -74,7 +85,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ }),
 
 /***/ "./assets/icon/icons8-cancel-50.png":
-/*!******************************************!*\
+/*!******************************************!*
   !*** ./assets/icon/icons8-cancel-50.png ***!
   \******************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -85,7 +96,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ }),
 
 /***/ "./assets/icon/icons8-categorize-50.png":
-/*!**********************************************!*\
+/*!**********************************************!*
   !*** ./assets/icon/icons8-categorize-50.png ***!
   \**********************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -96,7 +107,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ }),
 
 /***/ "./assets/icon/icons8-center-of-gravity-50.png":
-/*!*****************************************************!*\
+/*!*****************************************************!*
   !*** ./assets/icon/icons8-center-of-gravity-50.png ***!
   \*****************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -107,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ }),
 
 /***/ "./assets/icon/icons8-filled-circle-60.png":
-/*!*************************************************!*\
+/*!*************************************************!*
   !*** ./assets/icon/icons8-filled-circle-60.png ***!
   \*************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -118,7 +129,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ }),
 
 /***/ "./assets/icon/icons8-filled-green-circle-60.png":
-/*!*******************************************************!*\
+/*!*******************************************************!*
   !*** ./assets/icon/icons8-filled-green-circle-60.png ***!
   \*******************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -129,7 +140,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ }),
 
 /***/ "./assets/icon/icons8-list-52.png":
-/*!****************************************!*\
+/*!****************************************!*
   !*** ./assets/icon/icons8-list-52.png ***!
   \****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -140,7 +151,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ }),
 
 /***/ "./assets/icon/icons8-zoom-in-50.png":
-/*!*******************************************!*\
+/*!*******************************************!*
   !*** ./assets/icon/icons8-zoom-in-50.png ***!
   \*******************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -151,7 +162,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ }),
 
 /***/ "./styles/css/fonts.css":
-/*!******************************!*\
+/*!******************************!*
   !*** ./styles/css/fonts.css ***!
   \******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -162,7 +173,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ }),
 
 /***/ "./styles/css/map-style.css":
-/*!**********************************!*\
+/*!**********************************!*
   !*** ./styles/css/map-style.css ***!
   \**********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -173,7 +184,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ }),
 
 /***/ "./styles/css/style.css":
-/*!******************************!*\
+/*!******************************!*
   !*** ./styles/css/style.css ***!
   \******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -184,7 +195,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ }),
 
 /***/ "./styles/sass/style.scss":
-/*!********************************!*\
+/*!********************************!*
   !*** ./styles/sass/style.scss ***!
   \********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -195,7 +206,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ }),
 
 /***/ "../node_modules/moment/locale sync recursive ^\\.\\/.*$":
-/*!****************************************************!*\
+/*!****************************************************!*
   !*** ../node_modules/moment/locale/ sync ^\.\/.*$ ***!
   \****************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
@@ -235,9 +246,6 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
-/******/ 	// the startup function
-/******/ 	// It's empty as some runtime module handles the default behavior
-/******/ 	__webpack_require__.x = function() {}
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	!function() {
@@ -345,10 +353,43 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 		
 /******/ 		// no HMR manifest
 /******/ 		
-/******/ 		var checkDeferredModules = function() {};
+/******/ 		var checkDeferredModules = function() {
+/******/ 		
+/******/ 		};
+/******/ 		function checkDeferredModulesImpl() {
+/******/ 			var result;
+/******/ 			for(var i = 0; i < deferredModules.length; i++) {
+/******/ 				var deferredModule = deferredModules[i];
+/******/ 				var fulfilled = true;
+/******/ 				for(var j = 1; j < deferredModule.length; j++) {
+/******/ 					var depId = deferredModule[j];
+/******/ 					if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferredModules.splice(i--, 1);
+/******/ 					result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 				}
+/******/ 			}
+/******/ 			if(deferredModules.length === 0) {
+/******/ 				__webpack_require__.x();
+/******/ 				__webpack_require__.x = function() {
+/******/ 		
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		}
+/******/ 		__webpack_require__.x = function() {
+/******/ 			// reset startup function so it can be called again when more startup code is added
+/******/ 			__webpack_require__.x = function() {
+/******/ 		
+/******/ 			}
+/******/ 			chunkLoadingGlobal = chunkLoadingGlobal.slice();
+/******/ 			for(var i = 0; i < chunkLoadingGlobal.length; i++) webpackJsonpCallback(chunkLoadingGlobal[i]);
+/******/ 			return (checkDeferredModules = checkDeferredModulesImpl)();
+/******/ 		};
 /******/ 		
 /******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = function(parentChunkLoadingFunction, data) {
+/******/ 		var webpackJsonpCallback = function(data) {
 /******/ 			var chunkIds = data[0];
 /******/ 			var moreModules = data[1];
 /******/ 			var runtime = data[2];
@@ -369,7 +410,7 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 				}
 /******/ 			}
 /******/ 			if(runtime) runtime(__webpack_require__);
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			parentChunkLoadingFunction(data);
 /******/ 			while(resolves.length) {
 /******/ 				resolves.shift()();
 /******/ 			}
@@ -382,35 +423,8 @@ eval("var map = {\n\t\"./af\": \"../node_modules/moment/locale/af.js\",\n\t\"./a
 /******/ 		}
 /******/ 		
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 		
-/******/ 		function checkDeferredModulesImpl() {
-/******/ 			var result;
-/******/ 			for(var i = 0; i < deferredModules.length; i++) {
-/******/ 				var deferredModule = deferredModules[i];
-/******/ 				var fulfilled = true;
-/******/ 				for(var j = 1; j < deferredModule.length; j++) {
-/******/ 					var depId = deferredModule[j];
-/******/ 					if(installedChunks[depId] !== 0) fulfilled = false;
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferredModules.splice(i--, 1);
-/******/ 					result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
-/******/ 				}
-/******/ 			}
-/******/ 			if(deferredModules.length === 0) {
-/******/ 				__webpack_require__.x();
-/******/ 				__webpack_require__.x = function() {};
-/******/ 			}
-/******/ 			return result;
-/******/ 		}
-/******/ 		var startup = __webpack_require__.x;
-/******/ 		__webpack_require__.x = function() {
-/******/ 			// reset startup function so it can be called again when more startup code is added
-/******/ 			__webpack_require__.x = startup || (function() {});
-/******/ 			return (checkDeferredModules = checkDeferredModulesImpl)();
-/******/ 		};
+/******/ 		var parentChunkLoadingFunction = chunkLoadingGlobal.push.bind(chunkLoadingGlobal);
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback;
 /******/ 	}();
 /******/ 	
 /************************************************************************/
