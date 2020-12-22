@@ -138,10 +138,74 @@ h6 {
 
 //-------------------Widget-table--------------------------------
 
+.widget_1 {
+  display: block;
+}
+
+.table-title {
+  margin-top: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
 .table-container {
+  margin-top: 10px;
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.table-column-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.count {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.category-container {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.category-name {
+  display: inline-block;
+  height: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../assets/icon/arrow/arrow-left.png');
+    transform: translateY(25%);
+  }
+
+  &::after{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../assets/icon/arrow/arrow-right.png');
+    transform: translateY(25%);
+  }
+}
+
+.category-button {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('../../assets/icon/arrow/arrow-left.png');
 }
 
 //---------------------------------------------------
