@@ -12,6 +12,7 @@
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
+
     </head>
 
     <body>
@@ -31,12 +32,11 @@
                         <span class="widget__two__indicators deaths">Deaths</span>
                         <span class="widget__two__indicators recovered">Recovered</span>
                     </div>
+                    <div class="widget__two__block__country__search">
+                        <input type="text" id="search" class="widget__two__search__box"
+                            placeholder="Enter the country name">
+                    </div>
                     <div class="widget__two__block__countries">
-                        <div class="widget__two__countries">
-                            <img src="#" alt="" class="widget__two__flag">
-                            <span class="widget__two__name__countries">Cases</span>
-                            <span class="widget__two__indicator__countries">7888888888</span>
-                        </div>
 
                     </div>
                 </div>
@@ -47,7 +47,6 @@
                     <div class="dropdown dropdown-dark">
                         <select name="one" class="dropdown-select">
                             <option value="All countries">All countries</option>
-                            <option value="option" id="Option">Option</option>
                         </select>
                     </div>
                 </form>
@@ -58,6 +57,8 @@
         </div>
         <footer class="footer"></footer>
 
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script> -->
     </body>
 
 </lang>
