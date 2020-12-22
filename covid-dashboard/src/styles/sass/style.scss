@@ -123,7 +123,7 @@ h6 {
 .widget_4 {
   grid-column: 3;
   grid-row: 3 / span 4;
-  background-color: #222222;
+  background-color: #333333;
   position: relative;
   z-index: 1000;
 }
@@ -417,19 +417,22 @@ h6 {
 }
 
 .autocomplete {
-  /*the container must be positioned relative:*/
   position: relative;
-  display: inline-block;
+  margin: 20px 25px;
+  font-family: "Mitr", sans-serif;
 }
 input {
   border: 1px solid transparent;
-  background-color: #f1f1f1;
+  background-color: #222222;
   padding: 10px;
   font-size: 16px;
+  background: #222222;
 }
 input[type="text"] {
-  background-color: #f1f1f1;
+  background-color: #222222;
   width: 100%;
+  color: #fff;
+  font-family: "Mitr", sans-serif;
 }
 input[type="submit"] {
   background-color: DodgerBlue;
@@ -440,24 +443,23 @@ input[type="submit"] {
   border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
   top: 100%;
   left: 0;
   right: 0;
+  color: #fff;
 }
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #222222;
   border-bottom: 1px solid #d4d4d4;
+  color: #fff;
 }
 .autocomplete-items div:hover {
-  /*when hovering an item:*/
-  background-color: #e9e9e9;
+  background-color: #222222;
+  color: #fff;
 }
 .autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
