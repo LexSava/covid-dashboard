@@ -32,13 +32,18 @@
                         <span class="widget__two__indicators deaths">Deaths</span>
                         <span class="widget__two__indicators recovered">Recovered</span>
                     </div>
-                    <div class="widget__two__block__country__search">
-                        <input type="text" id="search" class="widget__two__search__box"
-                            placeholder="Enter the country name">
-                    </div>
-                    <div class="widget__two__block__countries">
+                    <form action="" autocomplete="off">
+                        <div class="widget__two__block__country__search autocomplete">
+                            <input type="text" id="search" class="widget__two__search__box myInput"
+                                placeholder="Enter the country name" name="country" list="countrys">
+                            <datalist id="countrys">
 
+                            </datalist>
+                        </div>
+                    </form>
+                    <div class="widget__two__block__countries">
                     </div>
+
                 </div>
             </section>
             <section class="content__widget widget_3">widget 3</section>
@@ -57,8 +62,6 @@
         </div>
         <footer class="footer"></footer>
 
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script> -->
     </body>
 
 </lang>
