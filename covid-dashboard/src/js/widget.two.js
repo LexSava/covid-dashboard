@@ -68,6 +68,7 @@ function sortingByDeaths() {
 }
 
 function sortingByRecovered() {
+
     while (COUNTRY_BLOCK.firstChild) {
         COUNTRY_BLOCK.removeChild(COUNTRY_BLOCK.firstChild);
     }
@@ -131,7 +132,6 @@ const outputHtml = matches => {
             newСountryСontainer.appendChild(newFlagImage);
             newСountryСontainer.appendChild(newNameCountry);
             newСountryСontainer.appendChild(newIndicatorCountry);
-
         }
         );
     }
