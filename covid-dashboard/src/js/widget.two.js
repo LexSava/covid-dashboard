@@ -7,7 +7,6 @@ const PROPOSED_COUNTRIES = document.querySelector('#countrys');
 export const search = document.querySelector('#search');
 
 let results;
-let countryForMap;
 let dataObtained;
 
 function CreatesListCountries(flag, country, indicator) {
