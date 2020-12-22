@@ -1,4 +1,5 @@
 import Chart from 'chart.js';
+import search from './widget.two';
 
 const BTN_EXPAND_BLOCK = document.querySelector('.widget_4__btn');
 const BLOCK_WIDGET_4 = document.querySelector('.widget_4');
@@ -83,11 +84,10 @@ async function BuildGraphWithData() {
   });
 }
 
-async function BuildGraphByCountry(countryNeme) {
+export async function BuildGraphByCountry(countryNeme) {
   const response = await fetch('https://disease.sh/v2/countries');
   const results = await response.json();
   const newArrDate = [];
-  console.log(results[1]);
   for (const key in results) {
     if (results[key].country === countryNeme) {
       newArrDate.push(results[key].cases);

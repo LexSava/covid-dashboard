@@ -65,7 +65,7 @@ create_element('div', ['region-class', 'region-id', , , '', document.querySelect
 create_element('div', ['close-region-class', 'close-region-id', , , `<img class = "close-image-region-class" src=${cancel}>`, document.querySelector('.region-class')]);
 create_element('div', ['region-text-class', 'region-text-id', , , '', document.querySelector('.region-class')]);
 
-function create_legend () {
+function create_legend() {
   document.getElementById('legend-text-id').innerHTML = '';
   let legend_icon;
   if (check.cumulative) legend_icon = red_icon;
@@ -113,7 +113,7 @@ async function getCountries() {
       y = 5;
     }
     let icon_fill, tooltip_content;
-    if (check.cumulative) {      
+    if (check.cumulative) {
       icon_fill = red_icon;
       tooltip_content = `Country: ${content[key].country} <br> 
         Cases: ${content[key].cases.toLocaleString()} <br> Deaths: ${content[key].deaths.toLocaleString()}`;
