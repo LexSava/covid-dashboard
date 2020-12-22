@@ -97,7 +97,6 @@ const searchStates = async searchText => {
         matches = [];
     }
     outputHtml(matches);
-
 }
 const outputHtml = matches => {
     while (COUNTRY_BLOCK.firstChild) {
@@ -108,7 +107,6 @@ const outputHtml = matches => {
     }
     if (matches.length > 0) {
         matches.map(match => {
-
             const newСountryСontainer = document.createElement('div');
             newСountryСontainer.classList.add('widget__two__countries');
             COUNTRY_BLOCK.appendChild(newСountryСontainer);
@@ -133,6 +131,7 @@ const outputHtml = matches => {
             newСountryСontainer.appendChild(newFlagImage);
             newСountryСontainer.appendChild(newNameCountry);
             newСountryСontainer.appendChild(newIndicatorCountry);
+
         }
         );
     }
