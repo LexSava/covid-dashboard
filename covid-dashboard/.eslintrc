@@ -1,14 +1,3 @@
 {
-    "extends": ["airbnb/base"],
-    "rules": {"linebreak-style": 0},
-    "env": {
-          "browser": true,
-          "node": true
-    },
-    "prefer-destructuring": ["error", {
-        "AssignmentExpression": {
-          "array": false,
-          "object": false
-        }
-      }]
+  "extends": ["airbnb/base"]
 }

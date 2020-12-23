@@ -7,3 +7,7 @@
   font-family: "Mitr";
   src: url("../../assets/fonts/Mitr/Mitr-Medium.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Mitr";
+  src: url("../../assets/fonts/Mitr/Mitr-Regular.ttf") format("truetype");
+}

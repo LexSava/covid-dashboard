@@ -1,4 +1,5 @@
 
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -96,16 +97,22 @@ h6 {
   font-family: "Mitr";
   src: url(f801a291ed84d94a1389568ee787ecd2.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Mitr";
+  src: url(f73e4ca629f609d4329cb5aa21541f4a.ttf) format("truetype");
+}
 .header {
   width: 100%;
-  background-color: #f5df4d;
+  background-color: #222222;
   height: 10%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .header h1 {
-  font-weight: 900;
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 5px;
   font-size: 1.9em;
+  color: #c20808;
 }
 
 .content {
@@ -150,13 +157,13 @@ h6 {
 .widget_4 {
   grid-column: 3;
   grid-row: 3/span 4;
-  background-color: #222222;
+  background-color: #333333;
   position: relative;
 }
 
 .footer {
   width: 100%;
-  background-color: #f5df4d;
+  background-color: #222222;
   height: 10%;
 }
 
@@ -249,7 +256,7 @@ h6 {
 .widget_4__btn {
   width: 20px;
   height: 20px;
-  background-image: url(f2370895a5dbf866302cde70a4c157f2.svg);
+  background-image: url(ac596011c68d9eedf5ada262e62effec.svg);
   position: absolute;
   top: 5px;
   right: 10px;
@@ -266,9 +273,10 @@ h6 {
   height: 100%;
   margin-bottom: 200px;
   top: 0;
+  z-index: 100000;
 }
 .active .widget_4__btn {
-  background-image: url(a05cab7c1b76a803d14a86599804f73c.svg);
+  background-image: url(27771abbc9fda210f529b83dfd2c688b.svg);
 }
 .active .widget_4__chart {
   width: 85%;
@@ -342,7 +350,6 @@ h6 {
   background: #f2f2f2;
   /* Fallback for IE 8 */
   background: rgba(0, 0, 0, 0) !important;
-  /* "transparent" doesn't work with Opera */
   border: 0;
   border-radius: 0;
   -webkit-appearance: none;
@@ -366,7 +373,6 @@ h6 {
   cursor: pointer;
 }
 
-/* Fix for IE 8 putting the arrows behind the select element. */
 .lt-ie9 .dropdown {
   z-index: 1;
 }
@@ -379,7 +385,6 @@ h6 {
   z-index: 3;
 }
 
-/* Dirty fix for Firefox adding padding where it shouldn't. */
 @-moz-document url-prefix() {
   .dropdown-select {
     padding-left: 6px;
@@ -419,6 +424,163 @@ h6 {
   background: #444;
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
 }
+
+.widget_2 {
+  display: block;
+  overflow: auto;
+  background-color: #333333;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 24px;
+  /* ширина для вертикального скролла */
+  height: 8px;
+  /* высота для горизонтального скролла */
+  background-color: #222222;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #c20808;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c2080894;
+}
+
+.widget__two__heading {
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 2px;
+  margin: 10px 5px;
+  color: #c20808;
+  font-size: 18px;
+  text-align: center;
+}
+
+.widget__two__block__indicators {
+  text-align: center;
+  font-family: "Mitr", sans-serif;
+}
+
+.widget__two__indicators {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-family: "Mitr", sans-serif;
+}
+
+.widget__two__block__countries {
+  margin-top: 15px;
+  font-family: "Mitr", sans-serif;
+}
+
+.widget__two__countries {
+  margin: 10px 10px 0 10px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #c20808;
+  cursor: pointer;
+}
+
+.widget__two__flag {
+  width: 30px;
+}
+
+.widget__two__name__countries {
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.widget__two__indicator__countries {
+  color: #c20808;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.autocomplete {
+  position: relative;
+  margin: 20px 25px;
+  font-family: "Mitr", sans-serif;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #222222;
+  padding: 10px;
+  font-size: 16px;
+  background: #222222;
+}
+
+input[type=text] {
+  background-color: #222222;
+  width: 100%;
+  color: #fff;
+  font-family: "Mitr", sans-serif;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #222222;
+  border-bottom: 1px solid #d4d4d4;
+  color: #fff;
+}
+
+.autocomplete-items div:hover {
+  background-color: #222222;
+  color: #fff;
+}
+
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+.widget__two__btn {
+  width: 20px;
+  height: 20px;
+  background-image: url(ac596011c68d9eedf5ada262e62effec.svg);
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #e5ff00;
+}
+
+.active__widget__two {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 200px;
+  top: 0;
+  z-index: 100000;
+}
+.active__widget__two .widget__two__btn {
+  background-image: url(27771abbc9fda210f529b83dfd2c688b.svg);
+}
 @font-face {
   font-family: "Alfa Slab One";
   src: url(f53d46bc54f7a54ecfe489f153bbb71a.ttf)
@@ -427,6 +589,10 @@ h6 {
 @font-face {
   font-family: "Mitr";
   src: url(f801a291ed84d94a1389568ee787ecd2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Mitr";
+  src: url(f73e4ca629f609d4329cb5aa21541f4a.ttf) format("truetype");
 }
 
 * {
@@ -477,13 +643,13 @@ h6 {
     justify-content: center;
     align-items: center;       
     position: absolute;
-    top: 16px;
-    left: 376px;
+    top: 20px;
+    left: 379px;
     z-index: 6000; 
 }
 .close-image-class {    
-    width: 30px;
-    height: 30px;    
+    width: 20px;
+    height: 20px;    
 }
 .close-image-class:hover {
     cursor: pointer;
@@ -493,13 +659,13 @@ h6 {
     justify-content: center;
     align-items: center;       
     position: absolute;
-    top: 134px;
+    top: 135px;
     left: 20px;
     z-index: 6000;
 }
 .center-image-class {    
-    width: 25px;
-    height: 25px;    
+    width: 20px;
+    height: 20px;    
 }
 .center-image-class:hover {
     cursor: pointer;    
@@ -509,13 +675,13 @@ h6 {
     justify-content: center;
     align-items: center;       
     position: absolute;
-    top: 134px;
+    top: 135px;
     left: 60px;    
     z-index: 6000;    
 }
 .zoomin-image-class {    
-    width: 25px;
-    height: 25px;    
+    width: 20px;
+    height: 20px;    
 }
 .zoomin-image-class:hover {
     cursor: pointer;    
@@ -564,3 +730,114 @@ h6 {
     font-weight: 100;
     color: #e0bf26;
 }
+.options-class {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;   
+    position: absolute;
+    width: 100px;
+    height: 40px;          
+    z-index: 3000;    
+    border-radius: 5px;
+    top: 10px;
+    right: 10px;
+    background: #333333;
+    border: solid 1px #dc143c; 
+    padding: 9px;
+}
+.zoom-reg-image-class, .legend-image-class, .skins-image-class {
+    width: 20px;
+    height: 20px;   
+    cursor: pointer;
+}
+#legend-id {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    background: #333333;
+    border: solid 1px #dc143c; 
+    padding: 5px;
+    z-index: 3000;    
+    border-radius: 5px;
+    align-items: flex-end;
+}
+.close-legend-class {
+    position: absolute;
+    top: 7px;
+    right: 7px;    
+}
+.close-image-legend-class {
+    width: 20px;
+    height: 20px;   
+    cursor: pointer;
+}
+.legend-text-class {
+    width: 196px;
+    height: 160px;
+    background: #222222;
+    color: #bdbdbd;  
+    padding: 5px;      
+}
+#p-legend-1-id {
+    line-height: 25px;
+}
+#p-legend-2-id {
+    line-height: 20px;
+    padding-top: 10px;    
+    padding-left: 2.5px;
+}
+#p-legend-3-id {
+    line-height: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+#p-legend-4-id {
+    line-height: 10px;
+    padding-top: 20px;
+    padding-left: 7.5px;
+}
+#p-legend-5-id {
+    line-height: 5px;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+#region-id {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    height: 175px;
+    background: #333333;
+    border: solid 1px #dc143c; 
+    padding: 5px;
+    z-index: 3000;    
+    border-radius: 5px;
+    align-items: flex-end;
+}
+.close-region-class {
+    position: absolute;
+    top: 7px;
+    right: 7px;    
+}
+.close-image-region-class {
+    width: 20px;
+    height: 20px;   
+    cursor: pointer;
+}
+.region-text-class {
+    width: 196px;
+    height: 135px;
+    background: #222222;
+    color: #bdbdbd;  
+    padding: 5px;      
+}
+.p-region-class {
+    line-height: 25px;
+    cursor: pointer;
+}
+

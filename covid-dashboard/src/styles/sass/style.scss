@@ -78,13 +78,15 @@ h6 {
 
 .header {
   width: 100%;
-  background-color: #f5df4d;
+  background-color: #222222;
   height: 10%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
   h1 {
-    font-weight: 900;
+    font-family: "Alfa Slab One", cursive;
+    letter-spacing: 5px;
     font-size: 1.9em;
+    color: #c20808;
   }
 }
 
@@ -126,13 +128,13 @@ h6 {
 .widget_4 {
   grid-column: 3;
   grid-row: 3 / span 4;
-  background-color: #222222;
+  background-color: #333333;
   position: relative;
 }
 
 .footer {
   width: 100%;
-  background-color: #f5df4d;
+  background-color: #222222;
   height: 10%;
 }
 
@@ -247,6 +249,7 @@ h6 {
   height: 100%;
   margin-bottom: 200px;
   top: 0;
+  z-index: 100000;
   .widget_4__btn {
     background-image: url("../../assets/icon/contract-arrows.svg");
   }
@@ -329,12 +332,7 @@ h6 {
   color: #62717a;
   text-shadow: 0 1px white;
   background: #f2f2f2; /* Fallback for IE 8 */
-  background: rgba(
-    0,
-    0,
-    0,
-    0
-  ) !important; /* "transparent" doesn't work with Opera */
+  background: rgba(0, 0, 0, 0) !important;
   border: 0;
   border-radius: 0;
   -webkit-appearance: none;
@@ -358,8 +356,6 @@ h6 {
   cursor: pointer;
 }
 
-/* Fix for IE 8 putting the arrows behind the select element. */
-
 .lt-ie9 .dropdown {
   z-index: 1;
 }
@@ -371,8 +367,6 @@ h6 {
 .lt-ie9 .dropdown-select:focus {
   z-index: 3;
 }
-
-/* Dirty fix for Firefox adding padding where it shouldn't. */
 
 @-moz-document url-prefix() {
   .dropdown-select {
@@ -417,4 +411,145 @@ h6 {
 .dropdown-dark .dropdown-select > option {
   background: #444;
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
+
+//------------------------------
+.widget_2 {
+  display: block;
+  overflow: auto;
+  background-color: #333333;
+  position: relative;
+}
+::-webkit-scrollbar {
+  width: 24px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: #222222;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #c20808;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c2080894;
+}
+
+.widget__two__heading {
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 2px;
+  margin: 10px 5px;
+  color: #c20808;
+  font-size: 18px;
+  text-align: center;
+}
+.widget__two__block__indicators {
+  text-align: center;
+  font-family: "Mitr", sans-serif;
+}
+.widget__two__indicators {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-family: "Mitr", sans-serif;
+}
+.widget__two__block__countries {
+  margin-top: 15px;
+  font-family: "Mitr", sans-serif;
+}
+.widget__two__countries {
+  margin: 10px 10px 0 10px;
+
+  padding-bottom: 5px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #c20808;
+  cursor: pointer;
+}
+.widget__two__flag {
+  width: 30px;
+}
+.widget__two__name__countries {
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.widget__two__indicator__countries {
+  color: #c20808;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.autocomplete {
+  position: relative;
+  margin: 20px 25px;
+  font-family: "Mitr", sans-serif;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #222222;
+  padding: 10px;
+  font-size: 16px;
+  background: #222222;
+}
+input[type="text"] {
+  background-color: #222222;
+  width: 100%;
+  color: #fff;
+  font-family: "Mitr", sans-serif;
+}
+input[type="submit"] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #222222;
+  border-bottom: 1px solid #d4d4d4;
+  color: #fff;
+}
+.autocomplete-items div:hover {
+  background-color: #222222;
+  color: #fff;
+}
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+.widget__two__btn {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../assets/icon/full-screen-arrows.svg");
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: rgb(229, 255, 0);
+}
+.active__widget__two {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 200px;
+  top: 0;
+  z-index: 100000;
+  .widget__two__btn {
+    background-image: url("../../assets/icon/contract-arrows.svg");
+  }
 }
