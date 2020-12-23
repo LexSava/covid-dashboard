@@ -1,13 +1,25 @@
 const categoryButtonPeriod = document.querySelector('.category-name_period');
 const categoryButtonValue = document.querySelector('.category-name_value');
 
-class Table {
-  constructor(url) {
+export default class Table {
+  constructor(url, country) {
     this.url = url;
     this.period = 'all';
     this.value = 'absolute';
-    this.searchType = 'country'
-    this.country = "Afghanistan";
+    this.searchType = 'global';
+
+    if (country === undefined) {
+      this.country = null;
+    } else {
+      this.country = country;
+      this.searchType = 'country'
+    }
+
+    this.setTableTile();
+  }
+
+  setTableTile() {
+    document.querySelector('.table-title').textContent = this.country || this.searchType[0].toUpperCase() + this.searchType.slice(1);
   }
 
   async getRequest() {    
@@ -21,7 +33,6 @@ class Table {
       for (let i = 0; i < content.length; i++) {
         if (content[i].country === this.country) {
           this.content = content[i];
-          console.log(content[i].country);
         }
       }
     }
