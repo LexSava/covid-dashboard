@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Alfa Slab One";
+  src: url("../../assets/fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Mitr";
+  src: url("../../assets/fonts/Mitr/Mitr-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Mitr";
+  src: url("../../assets/fonts/Mitr/Mitr-Regular.ttf") format("truetype");
+}
