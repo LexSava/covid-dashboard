@@ -4,10 +4,12 @@ const CASES_DATA = document.querySelector('.cases');
 const DEATHS_DATA = document.querySelector('.deaths');
 const RECOVERED_DATA = document.querySelector('.recovered');
 const PROPOSED_COUNTRIES = document.querySelector('#countrys');
+const BTN_EXPAND_BLOCK_2 = document.querySelector('.widget__two__btn');
 export const search = document.querySelector('#search');
 
 let results;
 let dataObtained;
+export let selectedCountry;
 
 function CreatesListCountries(flag, country, indicator) {
   const newСountryСontainer = document.createElement('div');
@@ -122,7 +124,7 @@ const outputHtml = (matches) => {
 
       const newIndicatorCountry = document.createElement('span');
       newIndicatorCountry.classList.add('widget__two__indicator__countries');
-      newIndicatorCountry.innerHTML = ` cases - ${match.cases}, deaths - ${match.deaths}, recovered - ${match.recovered}`;
+      newIndicatorCountry.innerHTML = ` - ${match.cases}`;
 
       PROPOSED_COUNTRIES.appendChild(newOption);
       newСountryСontainer.appendChild(newFlagImage);
@@ -133,4 +135,8 @@ const outputHtml = (matches) => {
 };
 search.addEventListener('input', () => {
   searchStates(search.value);
+});
+
+BTN_EXPAND_BLOCK_2.addEventListener('click', () => {
+  WIDGET_TWO.classList.toggle('active__widget__two');
 });

@@ -1,6 +1,6 @@
 import Chart from 'chart.js';
 
-const BTN_EXPAND_BLOCK = document.querySelector('.widget_4__btn');
+const BTN_EXPAND_BLOCK_4 = document.querySelector('.widget_4__btn');
 const BLOCK_WIDGET_4 = document.querySelector('.widget_4');
 const SELECT_COUNTRYS = document.querySelector('.dropdown-select');
 
@@ -83,7 +83,7 @@ async function BuildGraphWithData() {
   });
 }
 
-export async function BuildGraphByCountry(countryNeme) {
+async function BuildGraphByCountry(countryNeme) {
   const response = await fetch('https://disease.sh/v2/countries');
   const results = await response.json();
   const newArrDate = [];
@@ -128,7 +128,50 @@ export async function BuildGraphByCountry(countryNeme) {
   });
 }
 
-BTN_EXPAND_BLOCK.addEventListener('click', () => {
+async function BuilGraphIndicatorsDay() {
+  const response = await fetch('https://api.covid19api.com/summary');
+  const results = await response.json();
+  const newArrDate = [];
+  console.log(results.Global.NewConfirmed);
+
+  newArrDate.push(results.Global.NewConfirmed);
+  newArrDate.push(results.Global.NewDeaths);
+  newArrDate.push(results.Global.NewRecovered);
+
+  BarGraph = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Cases', 'Deaths', 'Recovered'],
+      datasets: [{
+        label: 'Contry',
+        data: newArrDate,
+        backgroundColor: [
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+
+        ],
+        borderColor: [
+          'rgba(255, 206, 86, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(54, 162, 235, 1)',
+        ],
+        borderWidth: 1,
+      }],
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+          },
+        }],
+      },
+    },
+  });
+}
+
+BTN_EXPAND_BLOCK_4.addEventListener('click', () => {
   BLOCK_WIDGET_4.classList.toggle('active');
 });
 
@@ -148,10 +191,6 @@ async function GetInformationThroughoutTheCountry() {
   }
 }
 
-function test() {
-  console.log('HI');
-}
-
 GetInformationThroughoutTheCountry();
 
 SELECT_COUNTRYS.onchange = () => {
@@ -159,12 +198,20 @@ SELECT_COUNTRYS.onchange = () => {
     BarGraph.destroy();
     LineGraph.destroy();
     BuildGraphWithData();
-  } else {
+  } else if (SELECT_COUNTRYS.value === 'Last day') {
     if (BarGraph !== undefined) {
       BarGraph.destroy();
     }
     LineGraph.destroy();
+    BuilGraphIndicatorsDay();
+  } else {
+    if (BarGraph !== undefined) {
+      BarGraph.destroy();
+    }
+
+    LineGraph.destroy();
     BuildGraphByCountry(SELECT_COUNTRYS.value);
   }
 };
+
 BuildGraphWithData();

@@ -103,14 +103,16 @@ h6 {
 }
 .header {
   width: 100%;
-  background-color: #f5df4d;
+  background-color: #222222;
   height: 10%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .header h1 {
-  font-weight: 900;
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 5px;
   font-size: 1.9em;
+  color: #c20808;
 }
 
 .content {
@@ -155,12 +157,11 @@ h6 {
   grid-row: 3/span 4;
   background-color: #333333;
   position: relative;
-  z-index: 100000;
 }
 
 .footer {
   width: 100%;
-  background-color: #f5df4d;
+  background-color: #222222;
   height: 10%;
 }
 
@@ -202,6 +203,7 @@ h6 {
   height: 100%;
   margin-bottom: 200px;
   top: 0;
+  z-index: 100000;
 }
 .active .widget_4__btn {
   background-image: url(27771abbc9fda210f529b83dfd2c688b.svg);
@@ -278,7 +280,6 @@ h6 {
   background: #f2f2f2;
   /* Fallback for IE 8 */
   background: rgba(0, 0, 0, 0) !important;
-  /* "transparent" doesn't work with Opera */
   border: 0;
   border-radius: 0;
   -webkit-appearance: none;
@@ -302,7 +303,6 @@ h6 {
   cursor: pointer;
 }
 
-/* Fix for IE 8 putting the arrows behind the select element. */
 .lt-ie9 .dropdown {
   z-index: 1;
 }
@@ -315,7 +315,6 @@ h6 {
   z-index: 3;
 }
 
-/* Dirty fix for Firefox adding padding where it shouldn't. */
 @-moz-document url-prefix() {
   .dropdown-select {
     padding-left: 6px;
@@ -360,6 +359,7 @@ h6 {
   display: block;
   overflow: auto;
   background-color: #333333;
+  position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -488,6 +488,28 @@ input[type=submit] {
 .autocomplete-active {
   background-color: DodgerBlue !important;
   color: #ffffff;
+}
+
+.widget__two__btn {
+  width: 20px;
+  height: 20px;
+  background-image: url(ac596011c68d9eedf5ada262e62effec.svg);
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #e5ff00;
+}
+
+.active__widget__two {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 200px;
+  top: 0;
+  z-index: 100000;
+}
+.active__widget__two .widget__two__btn {
+  background-image: url(27771abbc9fda210f529b83dfd2c688b.svg);
 }
 @font-face {
   font-family: "Alfa Slab One";
