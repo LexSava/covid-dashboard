@@ -6,6 +6,7 @@ import zoomin from '../assets/icon/icons8-zoom-in-50.png';
 import zoom_reg from '../assets/icon/icons8-bookmark-100.png';
 import legend from '../assets/icon/icons8-list-52.png';
 import skins from '../assets/icon/icons8-categorize-50.png';
+import Table from './widget-table';
 
 function create_element(type, options) {
   const elem = document.createElement(type);
@@ -150,6 +151,7 @@ async function getCountries() {
       document.querySelector('.center-class').style.display = 'flex';
       document.querySelector('.zoomin-class').style.display = 'flex';
       document.getElementById('span-value-country-id').innerHTML = content[key].country;
+      console.log(content[key].country);
       document.getElementById('span-value-cases-id').innerHTML = content[key].cases.toLocaleString();
       document.getElementById('span-value-deaths-id').innerHTML = content[key].deaths.toLocaleString();
       document.getElementById('span-value-recovered-id').innerHTML = content[key].recovered.toLocaleString();
@@ -162,6 +164,10 @@ async function getCountries() {
       document.getElementById('zoomin-id').addEventListener('click', () => {
         osmap.setView([lat, lon], 6);
       });
+
+      const url = 'https://disease.sh/v3/covid-19/';
+      const table = new Table(url, content[key].country);
+      table.getRequest();
     });
   }
 }
