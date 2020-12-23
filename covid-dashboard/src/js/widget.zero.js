@@ -2,11 +2,11 @@ const widget_zero = document.querySelector('.widget_0');
 widget_zero.classList.add('general__information');
 
 async function getResponseAllCases() {
-  const response = await fetch('https://api.covid19api.com/summary');
+  const response = await fetch('https://disease.sh/v3/covid-19/all');
   const content = await response.json();
-  widget_zero.appendChild(getEl(`- Cases - ${content.Global.TotalConfirmed}`));
-  widget_zero.appendChild(getEl(`- Deaths - ${content.Global.TotalDeaths}`));
-  widget_zero.appendChild(getEl(`- Recovered - ${content.Global.TotalRecovered}`));
+  widget_zero.appendChild(getEl(`- Cases - ${content.cases}`));
+  widget_zero.appendChild(getEl(`- Deaths - ${content.deaths}`));
+  widget_zero.appendChild(getEl(`- Recovered - ${content.recovered}`));
 }
 
 getResponseAllCases();
