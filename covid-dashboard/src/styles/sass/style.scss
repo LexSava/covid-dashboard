@@ -125,7 +125,6 @@ h6 {
   grid-row: 3 / span 4;
   background-color: #333333;
   position: relative;
-  z-index: 100000;
 }
 
 .footer {
@@ -173,6 +172,7 @@ h6 {
   height: 100%;
   margin-bottom: 200px;
   top: 0;
+  z-index: 100000;
   .widget_4__btn {
     background-image: url("../../assets/icon/contract-arrows.svg");
   }

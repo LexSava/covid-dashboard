@@ -6,8 +6,10 @@ const RECOVERED_DATA = document.querySelector('.recovered');
 const PROPOSED_COUNTRIES = document.querySelector('#countrys');
 export const search = document.querySelector('#search');
 
+
 let results;
 let dataObtained;
+export let selectedCountry;
 
 function CreatesListCountries(flag, country, indicator) {
   const newСountryСontainer = document.createElement('div');
@@ -122,7 +124,7 @@ const outputHtml = (matches) => {
 
       const newIndicatorCountry = document.createElement('span');
       newIndicatorCountry.classList.add('widget__two__indicator__countries');
-      newIndicatorCountry.innerHTML = ` cases - ${match.cases}, deaths - ${match.deaths}, recovered - ${match.recovered}`;
+      newIndicatorCountry.innerHTML = ` - ${match.cases}`;
 
       PROPOSED_COUNTRIES.appendChild(newOption);
       newСountryСontainer.appendChild(newFlagImage);
