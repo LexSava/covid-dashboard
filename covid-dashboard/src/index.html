@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <lang lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +22,31 @@
             <section class="content__widget widget_0">
                 <h2>Global information for 2020</h2>
             </section>
-            <section class="content__widget widget_1">widget 1</section>
+       <section class="content__widget widget_1">
+				<h2 class="table-title">Global</h2>
+				<div class="table-container">
+					<div class="table-column table-column_diseases">
+						<h3 class="table-column-title table-column-title_diseases">Cases</h3>
+						<span class="count count_cases"></span>
+					</div>
+					<div class="table-column table-column_deaths">
+						<h3 class="table-column-title table-column-title_deaths">Deaths</h3>
+						<span class="count count_deaths"></span>
+					</div>
+					<div class="table-column table-column_recovered">
+						<h3 class="table-column-title table-column-title_recovered">Recovered</h3>
+						<span class="count count_recovered"></span>
+					</div>
+				</div>
+				<div class="category-container">
+					<div class="category category_period">
+						<span class="category-name category-name_period">All period</span>
+					</div>
+					<div class="category category_value">
+						<span class="category-name category-name_value">Absolute</span>
+					</div>
+				</div>
+			</section>
             <section class="content__widget widget_2">
                 <div>
                     <h2 class="widget__two__heading">List of countries</h2>
@@ -56,14 +79,14 @@
                             <option value="Last day">Last day</option>
                         </select>
                     </div>
-                </form>
+              </form>
 
-                <button class=" widget_4__btn"></button>
-                <div class="widget_4__chart"><canvas id="myChart"></canvas></div>
-            </section>
-        </div>
-        <footer class="footer"></footer>
+				<button class=" widget_4__btn"></button>
+				<div class="widget_4__chart"><canvas id="myChart"></canvas></div>
+			</section>
+		</div>
+		<footer class="footer"></footer>
 
-    </body>
+	</body>
 
 </lang>

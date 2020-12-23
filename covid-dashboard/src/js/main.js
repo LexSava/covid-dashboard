@@ -7,3 +7,4 @@ import './map-script';
 import '../styles/css/map-style.css';
 import './widget.four';
 import './widget.two';
+import './widget-table';
