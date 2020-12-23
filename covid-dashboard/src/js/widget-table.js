@@ -6,14 +6,27 @@ class Table {
     this.url = url;
     this.period = 'all';
     this.value = 'absolute';
+    this.searchType = 'country'
+    this.country = "Afghanistan";
   }
 
-  async getRequest() {
-    const response = await fetch(this.url);
-    const content = await response.json();
+  async getRequest() {    
+    if (this.searchType === 'global') {
+      let response = await fetch(this.url + 'all/');
+      let content = await response.json();
+      this.content = content;
+    } else {
+      let response = await fetch(this.url + 'countries/');
+      let content = await response.json();
+      for (let i = 0; i < content.length; i++) {
+        if (content[i].country === this.country) {
+          this.content = content[i];
+          console.log(content[i].country);
+        }
+      }
+    }
     
-    this.content = content;
-    this.getData(content);
+    this.getData(this.content);
   }
 
   getData(content) {
@@ -80,7 +93,7 @@ class Table {
   }
 }
 
-const url = 'https://disease.sh/v3/covid-19/all'
+const url = 'https://disease.sh/v3/covid-19/'
 const table = new Table(url);
 table.getRequest();
 
