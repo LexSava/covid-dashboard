@@ -138,8 +138,6 @@ async function BuilGraphIndicatorsDay() {
   newArrDate.push(results.Global.NewDeaths);
   newArrDate.push(results.Global.NewRecovered);
 
-
-
   BarGraph = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -217,4 +215,3 @@ SELECT_COUNTRYS.onchange = () => {
 };
 
 BuildGraphWithData();
-

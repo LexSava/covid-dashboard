@@ -7,7 +7,6 @@ const PROPOSED_COUNTRIES = document.querySelector('#countrys');
 const BTN_EXPAND_BLOCK_2 = document.querySelector('.widget__two__btn');
 export const search = document.querySelector('#search');
 
-
 let results;
 let dataObtained;
 export let selectedCountry;
