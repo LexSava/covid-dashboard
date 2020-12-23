@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+}
+.wrapper-map-class {    
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+}
+#map-id {       
+    width: 100%;
+    height:100%;
+}
+.feature-info-class {
+    display: none; 
+    justify-content: center;
+    align-items: center;   
+    position: absolute;
+    width: 400px;
+    height: 155px;
+    top: 10px;
+    left: 10px;
+    background: #333333;    
+    border: solid 1px #dc143c;
+    z-index: 5000;    
+    border-radius: 5px;
+}
+.info-class {    
+    width: 98%;
+    height: 77px;
+    background: #222222;
+    border: solid 1px #404040;
+    color: #bdbdbd;
+    font-size: 1.4em;
+    padding-left: 5px;
+}
+.span-value-class {
+    font-weight: 600;
+    font-style: italic;
+}
+#span-value-cases-id {
+    font-weight: 100;
+    color: #dc143c;
+}
+.close-class {
+    display: none; 
+    justify-content: center;
+    align-items: center;       
+    position: absolute;
+    top: 20px;
+    left: 379px;
+    z-index: 6000; 
+}
+.close-image-class {    
+    width: 20px;
+    height: 20px;    
+}
+.close-image-class:hover {
+    cursor: pointer;
+}
+.center-class {
+    display: none; 
+    justify-content: center;
+    align-items: center;       
+    position: absolute;
+    top: 135px;
+    left: 20px;
+    z-index: 6000;
+}
+.center-image-class {    
+    width: 20px;
+    height: 20px;    
+}
+.center-image-class:hover {
+    cursor: pointer;    
+}
+.zoomin-class {
+    display: none; 
+    justify-content: center;
+    align-items: center;       
+    position: absolute;
+    top: 135px;
+    left: 60px;    
+    z-index: 6000;    
+}
+.zoomin-image-class {    
+    width: 20px;
+    height: 20px;    
+}
+.zoomin-image-class:hover {
+    cursor: pointer;    
+}
+.button-class {
+    display: flex; 
+    justify-content: center;
+    align-items: center;   
+    position: absolute;
+    width: 150px;
+    height: 40px;          
+    z-index: 5000;    
+    border-radius: 5px;
+}
+.button-class:hover {
+    cursor: pointer;
+}
+.button-text-class {
+    color: #bdbdbd;
+    font-size: 1.2em;
+}
+.active-class {
+    background: #333333; 
+    border: solid 1px #dc143c; 
+}
+.passive-class {
+    background: black; 
+    border: solid 1px #404040; 
+}
+#cumulative-cases-id {
+    top: 550px;
+    left: 10px;
+}
+#active-cases-id {
+    top: 550px;
+    left: 170px;
+}
+#paragraph4-id, #paragraph5-id {
+    display: none;
+}
+#span-value-active-id {
+    font-weight: 100;
+    color: #26e07f;
+}
+#span-value-recovered-id {
+    font-weight: 100;
+    color: #e0bf26;
+}
+.options-class {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;   
+    position: absolute;
+    width: 100px;
+    height: 40px;          
+    z-index: 3000;    
+    border-radius: 5px;
+    top: 10px;
+    right: 10px;
+    background: #333333;
+    border: solid 1px #dc143c; 
+    padding: 9px;
+}
+.zoom-reg-image-class, .legend-image-class, .skins-image-class {
+    width: 20px;
+    height: 20px;   
+    cursor: pointer;
+}
+#legend-id {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    background: #333333;
+    border: solid 1px #dc143c; 
+    padding: 5px;
+    z-index: 3000;    
+    border-radius: 5px;
+    align-items: flex-end;
+}
+.close-legend-class {
+    position: absolute;
+    top: 7px;
+    right: 7px;    
+}
+.close-image-legend-class {
+    width: 20px;
+    height: 20px;   
+    cursor: pointer;
+}
+.legend-text-class {
+    width: 196px;
+    height: 160px;
+    background: #222222;
+    color: #bdbdbd;  
+    padding: 5px;      
+}
+#p-legend-1-id {
+    line-height: 25px;
+}
+#p-legend-2-id {
+    line-height: 20px;
+    padding-top: 10px;    
+    padding-left: 2.5px;
+}
+#p-legend-3-id {
+    line-height: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+#p-legend-4-id {
+    line-height: 10px;
+    padding-top: 20px;
+    padding-left: 7.5px;
+}
+#p-legend-5-id {
+    line-height: 5px;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+#region-id {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    height: 175px;
+    background: #333333;
+    border: solid 1px #dc143c; 
+    padding: 5px;
+    z-index: 3000;    
+    border-radius: 5px;
+    align-items: flex-end;
+}
+.close-region-class {
+    position: absolute;
+    top: 7px;
+    right: 7px;    
+}
+.close-image-region-class {
+    width: 20px;
+    height: 20px;   
+    cursor: pointer;
+}
+.region-text-class {
+    width: 196px;
+    height: 135px;
+    background: #222222;
+    color: #bdbdbd;  
+    padding: 5px;      
+}
+.p-region-class {
+    line-height: 25px;
+    cursor: pointer;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<lang lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico" type="image/png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+    </head>
+
+    <body>
+        <header class="header">
+            <h1>COVID-19 Dashboard</h1>
+        </header>
+        <div class="content">
+            <section class="content__widget widget_0">
+                <h2>Global information for 2020</h2>
+            </section>
+       <section class="content__widget widget_1">
+				<h2 class="table-title">Global</h2>
+				<div class="table-container">
+					<div class="table-column table-column_diseases">
+						<h3 class="table-column-title table-column-title_diseases">Cases</h3>
+						<span class="count count_cases"></span>
+					</div>
+					<div class="table-column table-column_deaths">
+						<h3 class="table-column-title table-column-title_deaths">Deaths</h3>
+						<span class="count count_deaths"></span>
+					</div>
+					<div class="table-column table-column_recovered">
+						<h3 class="table-column-title table-column-title_recovered">Recovered</h3>
+						<span class="count count_recovered"></span>
+					</div>
+				</div>
+				<div class="category-container">
+					<div class="category category_period">
+						<span class="category-name category-name_period">All period</span>
+					</div>
+					<div class="category category_value">
+						<span class="category-name category-name_value">Absolute</span>
+					</div>
+                </div>
+                <button class="global-button">Global</button>
+			</section>
+            <section class="content__widget widget_2">
+                <div>
+                    <h2 class="widget__two__heading">List of countries</h2>
+                    <button class="widget__two__btn"></button>
+                    <div class="widget__two__block__indicators">
+                        <span class="widget__two__indicators cases">Cases</span>
+                        <span class="widget__two__indicators deaths">Deaths</span>
+                        <span class="widget__two__indicators recovered">Recovered</span>
+                    </div>
+                    <form action="" autocomplete="off">
+                        <div class="widget__two__block__country__search autocomplete">
+                            <input type="text" id="search" class="widget__two__search__box myInput"
+                                placeholder="Enter the country name" name="country" list="countrys">
+                            <datalist id="countrys">
+
+                            </datalist>
+                        </div>
+                    </form>
+                    <div class="widget__two__block__countries">
+                    </div>
+
+                </div>
+            </section>
+            <section class="content__widget widget_3">widget 3</section>
+            <section class="content__widget widget_4">
+                <form class="container">
+                    <div class="dropdown dropdown-dark">
+                        <select name="one" class="dropdown-select">
+                            <option value="All countries">All countries</option>
+                            <option value="Last day">Last day</option>
+                        </select>
+                    </div>
+              </form>
+				<button class=" widget_4__btn"></button>
+				<div class="widget_4__chart"><canvas id="myChart"></canvas></div>
+			</section>
+		</div>
+		<footer class="footer"></footer>
+
+	</body>
+
+</lang>
