@@ -87,11 +87,9 @@ table.getRequest();
 categoryButtonPeriod.addEventListener('click', () => {
   table.changeCategoryPeriod();
   table.getRequest();
-  console.log('Period...');
 });
 
 categoryButtonValue.addEventListener('click', () => {
   table.changeCategoryValue();
   table.getRequest();
-  console.log('Value...')
 });
