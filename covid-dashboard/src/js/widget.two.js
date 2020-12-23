@@ -4,6 +4,7 @@ const CASES_DATA = document.querySelector('.cases');
 const DEATHS_DATA = document.querySelector('.deaths');
 const RECOVERED_DATA = document.querySelector('.recovered');
 const PROPOSED_COUNTRIES = document.querySelector('#countrys');
+const BTN_EXPAND_BLOCK_2 = document.querySelector('.widget__two__btn');
 export const search = document.querySelector('#search');
 
 
@@ -135,4 +136,8 @@ const outputHtml = (matches) => {
 };
 search.addEventListener('input', () => {
   searchStates(search.value);
+});
+
+BTN_EXPAND_BLOCK_2.addEventListener('click', () => {
+  WIDGET_TWO.classList.toggle('active__widget__two');
 });

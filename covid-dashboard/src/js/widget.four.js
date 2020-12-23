@@ -1,6 +1,6 @@
 import Chart from 'chart.js';
 
-const BTN_EXPAND_BLOCK = document.querySelector('.widget_4__btn');
+const BTN_EXPAND_BLOCK_4 = document.querySelector('.widget_4__btn');
 const BLOCK_WIDGET_4 = document.querySelector('.widget_4');
 const SELECT_COUNTRYS = document.querySelector('.dropdown-select');
 
@@ -173,7 +173,7 @@ async function BuilGraphIndicatorsDay() {
   });
 }
 
-BTN_EXPAND_BLOCK.addEventListener('click', () => {
+BTN_EXPAND_BLOCK_4.addEventListener('click', () => {
   BLOCK_WIDGET_4.classList.toggle('active');
 });
 

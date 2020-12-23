@@ -255,12 +255,7 @@ h6 {
   color: #62717a;
   text-shadow: 0 1px white;
   background: #f2f2f2; /* Fallback for IE 8 */
-  background: rgba(
-    0,
-    0,
-    0,
-    0
-  ) !important; /* "transparent" doesn't work with Opera */
+  background: rgba(0, 0, 0, 0) !important;
   border: 0;
   border-radius: 0;
   -webkit-appearance: none;
@@ -284,8 +279,6 @@ h6 {
   cursor: pointer;
 }
 
-/* Fix for IE 8 putting the arrows behind the select element. */
-
 .lt-ie9 .dropdown {
   z-index: 1;
 }
@@ -297,8 +290,6 @@ h6 {
 .lt-ie9 .dropdown-select:focus {
   z-index: 3;
 }
-
-/* Dirty fix for Firefox adding padding where it shouldn't. */
 
 @-moz-document url-prefix() {
   .dropdown-select {
@@ -350,6 +341,7 @@ h6 {
   display: block;
   overflow: auto;
   background-color: #333333;
+  position: relative;
 }
 ::-webkit-scrollbar {
   width: 24px; /* ширина для вертикального скролла */
@@ -462,4 +454,25 @@ input[type="submit"] {
 .autocomplete-active {
   background-color: DodgerBlue !important;
   color: #ffffff;
+}
+
+.widget__two__btn {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../assets/icon/full-screen-arrows.svg");
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: rgb(229, 255, 0);
+}
+.active__widget__two {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 200px;
+  top: 0;
+  z-index: 100000;
+  .widget__two__btn {
+    background-image: url("../../assets/icon/contract-arrows.svg");
+  }
 }
