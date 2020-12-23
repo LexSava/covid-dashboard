@@ -1,3 +1,4 @@
+import Table from './widget-table';
 const WIDGET_TWO = document.querySelector('.widget_2');
 const COUNTRY_BLOCK = document.querySelector('.widget__two__block__countries');
 const CASES_DATA = document.querySelector('.cases');
@@ -14,6 +15,9 @@ export let selectedCountry;
 function CreatesListCountries(flag, country, indicator) {
   const newСountryСontainer = document.createElement('div');
   newСountryСontainer.classList.add('widget__two__countries');
+  newСountryСontainer.addEventListener('click', (event) => {
+    updateTable(event.target);
+  });
   COUNTRY_BLOCK.appendChild(newСountryСontainer);
 
   const newFlagImage = document.createElement('img');
@@ -121,6 +125,10 @@ const outputHtml = (matches) => {
       const newNameCountry = document.createElement('span');
       newNameCountry.classList.add('widget__two__name__countries');
       newNameCountry.innerHTML = `${match.country}`;
+  
+      const url = 'https://disease.sh/v3/covid-19/';
+      const table = new Table(url, match.country);
+      table.getRequest();
 
       const newIndicatorCountry = document.createElement('span');
       newIndicatorCountry.classList.add('widget__two__indicator__countries');
@@ -140,3 +148,10 @@ search.addEventListener('input', () => {
 BTN_EXPAND_BLOCK_2.addEventListener('click', () => {
   WIDGET_TWO.classList.toggle('active__widget__two');
 });
+
+function updateTable(target) {
+  let countryName = target.closest('div').childNodes[1].textContent;
+  const url = 'https://disease.sh/v3/covid-19/';
+  const table = new Table(url, countryName);
+  table.getRequest();
+}

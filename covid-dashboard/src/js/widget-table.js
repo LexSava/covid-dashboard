@@ -1,56 +1,45 @@
-// const diseasesElement = document.querySelector('.count_diseases');
-// const deathsElement = document.querySelector('.count_deaths');
-// const recoveredElement = document.querySelector('.count_recovered');
-
-// async function getCountries () {
-//   const response = await fetch(https://api.covid19api.com/summary);
-//   const content = await response.json();
-
-//   const diseases = content.Global.TotalConfirmed;
-//   const deaths = content.Global.TotalDeaths;
-//   const recovered = content.Global.TotalRecovered;
-
-//   console.log(diseases, deaths, recovered);
-
-//   diseasesElement.textContent = diseases;
-//   deathsElement.textContent = deaths;
-//   recoveredElement.textContent = recovered;
-// }
-
-// getCountries();
 const categoryButtonPeriod = document.querySelector('.category-name_period');
 const categoryButtonValue = document.querySelector('.category-name_value');
+const globalButton = document.querySelector('.global-button');
 
-class Table {
-  constructor(url) {
+export default class Table {
+  constructor(url, country) {
     this.url = url;
     this.period = 'all';
     this.value = 'absolute';
+    this.searchType = 'global';
+
+    if (country === undefined) {
+      this.country = null;
+    } else {
+      this.country = country;
+      this.searchType = 'country'
+    }
+
+    this.setTableTile();
   }
 
-  async getRequest() {
-    const response = await fetch(this.url);
-    const content = await response.json();
+  setTableTile() {
+    document.querySelector('.table-title').textContent = this.country || this.searchType[0].toUpperCase() + this.searchType.slice(1);
+  }
+
+  async getRequest() {    
+    if (this.searchType === 'global') {
+      let response = await fetch(this.url + 'all/');
+      let content = await response.json();
+      this.content = content;
+    } else {
+      let response = await fetch(this.url + 'countries/');
+      let content = await response.json();
+      for (let i = 0; i < content.length; i++) {
+        if (content[i].country === this.country) {
+          this.content = content[i];
+        }
+      }
+    }
     
-    this.content = content;
-    this.getData(content);
+    this.getData(this.content);
   }
-
-  // if (this.period === 'all') {
-  //   if (this.value === 'perOneHundredThousand') {
-  //     this.cases = content.casesPerOneMillion * 10;
-  //     this.deaths = content.deathsPerOneMillion * 10;
-  //     this.recovered = content.recoveredPerOneMillion * 10; 
-  //   } else if (this.value === 'absolute') {
-  //     this.cases = content.cases;
-  //     this.deaths = content.deaths;
-  //     this.recovered = content.recovered; 
-  //   }
-  // } else if (this.period === 'today') {
-  //   this.cases = content.todayCases;
-  //   this.deaths = content.todayDeaths;
-  //   this.recovered = content.todayRecovered;
-  // }
 
   getData(content) {
     switch (this.period) {
@@ -116,18 +105,21 @@ class Table {
   }
 }
 
-const url = 'https://disease.sh/v3/covid-19/all'
+const url = 'https://disease.sh/v3/covid-19/'
 const table = new Table(url);
 table.getRequest();
 
 categoryButtonPeriod.addEventListener('click', () => {
   table.changeCategoryPeriod();
   table.getRequest();
-  console.log('Period...');
 });
 
 categoryButtonValue.addEventListener('click', () => {
   table.changeCategoryValue();
   table.getRequest();
-  console.log('Value...')
 });
+
+globalButton.addEventListener('click', () => {
+  document.querySelector('.table-title').textContent = 'Global'
+  table.getRequest();
+})
