@@ -125,6 +125,10 @@ const outputHtml = (matches) => {
       const newNameCountry = document.createElement('span');
       newNameCountry.classList.add('widget__two__name__countries');
       newNameCountry.innerHTML = `${match.country}`;
+  
+      const url = 'https://disease.sh/v3/covid-19/';
+      const table = new Table(url, match.country);
+      table.getRequest();
 
       const newIndicatorCountry = document.createElement('span');
       newIndicatorCountry.classList.add('widget__two__indicator__countries');
