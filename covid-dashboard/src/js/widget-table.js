@@ -1,5 +1,6 @@
 const categoryButtonPeriod = document.querySelector('.category-name_period');
 const categoryButtonValue = document.querySelector('.category-name_value');
+const globalButton = document.querySelector('.global-button');
 
 export default class Table {
   constructor(url, country) {
@@ -117,3 +118,8 @@ categoryButtonValue.addEventListener('click', () => {
   table.changeCategoryValue();
   table.getRequest();
 });
+
+globalButton.addEventListener('click', () => {
+  document.querySelector('.table-title').textContent = 'Global'
+  table.getRequest();
+})
