@@ -78,13 +78,15 @@ h6 {
 
 .header {
   width: 100%;
-  background-color: #f5df4d;
+  background-color: #222222;
   height: 10%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
   h1 {
-    font-weight: 900;
+    font-family: "Alfa Slab One", cursive;
+    letter-spacing: 5px;
     font-size: 1.9em;
+    color: #c20808;
   }
 }
 
@@ -129,7 +131,7 @@ h6 {
 
 .footer {
   width: 100%;
-  background-color: #f5df4d;
+  background-color: #222222;
   height: 10%;
 }
 
